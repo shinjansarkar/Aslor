@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #0a0d0b;
+  --bg-card: rgba(18, 22, 19, 0.75);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(190, 242, 100, 0.3);
+  --color-lime: #bef264;
+  --color-lime-dark: #a3e635;
+  --color-gold: #fbbf24;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Outfit', -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: #f3f4f6;
+}
+
+body {
+  background-color: #0a0d0b;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(190, 242, 100, 0.04) 0%, transparent 60%),
+    radial-gradient(circle at 100% 40%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
+    url('/logo.webp');
+  background-repeat: no-repeat;
+  background-position: center 150px;
+  background-size: 650px auto;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Watermark Overlay for Brand Background */
+.bg-logo-hero {
+  background-image: 
+    radial-gradient(circle at 70% 30%, rgba(190, 242, 100, 0.06) 0%, transparent 50%),
+    linear-gradient(to bottom, rgba(10, 13, 11, 0.6), rgba(10, 13, 11, 0.95)),
+    url('/logo.webp');
+  background-repeat: no-repeat;
+  background-position: 85% 20%;
+  background-size: 550px auto;
+}
+
+.bg-logo-watermark-section {
+  background-image: 
+    linear-gradient(to right, rgba(10, 13, 11, 0.95), rgba(10, 13, 11, 0.85)),
+    url('/logo.webp');
+  background-repeat: no-repeat;
+  background-position: right 50px center;
+  background-size: 450px auto;
+}
+
+.font-serif-title {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0d0b;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c221d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bef264;
+}
+
+/* Classy Solaris Cards */
+.card-classy {
+  background: rgba(18, 22, 19, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-classy:hover {
+  border-color: rgba(190, 242, 100, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Solaris Style Lime Pill Button */
+.btn-solaris-lime {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem 0.625rem 0.625rem 1.375rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.925rem;
+  color: #080c09;
+  background-color: #bef264;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+.btn-solaris-lime:hover {
+  background-color: #a3e635;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(190, 242, 100, 0.3);
+}
+
+.btn-solaris-lime .icon-badge {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  background-color: #0a0d0b;
+  color: #bef264;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+.btn-solaris-lime:hover .icon-badge {
+  transform: rotate(45deg);
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Solaris Style Dark Pill Button */
+.btn-solaris-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem 0.625rem 0.625rem 1.375rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.925rem;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.btn-solaris-dark:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(190, 242, 100, 0.4);
+  transform: translateY(-2px);
+}
+.btn-solaris-dark .icon-badge {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+.btn-solaris-dark:hover .icon-badge {
+  transform: rotate(45deg);
+  background-color: #bef264;
+  color: #000000;
+}
+
+/* Custom Range Input */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #171f19;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: #bef264;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+  box-shadow: 0 0 12px rgba(190, 242, 100, 0.6);
+  transition: transform 0.1s ease;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Form inputs */
+.form-input-classy {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.75rem;
+  background: rgba(12, 16, 13, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f3f4f6;
+  font-size: 0.925rem;
+  transition: all 0.2s ease;
+}
+.form-input-classy:focus {
+  outline: none;
+  border-color: #bef264;
+  box-shadow: 0 0 0 3px rgba(190, 242, 100, 0.15);
+  background: rgba(18, 23, 19, 0.95);
+}
