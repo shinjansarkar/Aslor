@@ -26,7 +26,7 @@ export default function ExpertiseSection({ onSelectTrack }) {
             </h2>
 
             <p className="text-neutral-300 text-base leading-relaxed">
-              We deliver world-class solar engineering and certified equipment across West Bengal. As an authorized franchise partner of APN Solar, our commitment to quality, customer satisfaction, and environmental responsibility remains unmatched.
+              We deliver world-class solar engineering and certified equipment across West Bengal. As a premier solar energy partner, our commitment to quality, customer satisfaction, and environmental responsibility remains unmatched.
             </p>
 
             <div>

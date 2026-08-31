@@ -7,8 +7,8 @@ export default function WhyChooseAslor() {
   const trustPillars = [
     {
       icon: ShieldCheck,
-      title: 'Authorized Partnership',
-      desc: 'Proud franchise partner of APN Solar, bringing advanced solar technology and reliable manufacturing standards directly to your doorstep.',
+      title: 'Certified Partnership',
+      desc: 'Premier solar energy partner, bringing advanced solar technology and reliable manufacturing standards directly to your doorstep.',
     },
     {
       icon: Award,

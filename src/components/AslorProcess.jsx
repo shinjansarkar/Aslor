@@ -20,16 +20,16 @@ export default function AslorProcess() {
     {
       num: '03',
       title: 'Expert Execution & Installation',
-      actor: 'APN Solar Engineering Team',
+      actor: 'Certified Engineering Team',
       icon: Wrench,
-      desc: 'Once booked, APN Solar’s specialized engineering team steps in to handle site survey, equipment delivery, and professional installation.'
+      desc: 'Once booked, our specialized engineering team steps in to handle site survey, equipment delivery, and professional installation.'
     },
     {
       num: '04',
       title: 'Long-Term Support',
       actor: 'Aslor Enterprises (Siliguri)',
       icon: ShieldCheck,
-      desc: 'You have a local partner in West Bengal supporting you, backed by APN Solar’s manufacturing warranty and standards.'
+      desc: 'You have a local partner in West Bengal supporting you, backed by trusted manufacturing warranty and standards.'
     }
   ];
 

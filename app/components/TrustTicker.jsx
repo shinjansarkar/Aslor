@@ -5,11 +5,10 @@ import { ShieldCheck, Award, Zap, CheckCircle } from 'lucide-react';
 
 export default function TrustTicker() {
   const partners = [
-    { name: 'APN Solar Official Franchise', tag: 'Turnkey EPC Partner' },
-    { name: 'PM Surya Ghar Scheme', tag: 'Govt Subsidy Eligible' },
-    { name: 'Tata Power Solar Modules', tag: 'Tier 1 Panel Partner' },
     { name: 'MNRE Registered Partner', tag: 'Govt Approved' },
-    { name: 'WBSEDCL & CESC Approval', tag: 'Net Metering Certified' },
+    { name: 'PM Surya Ghar Scheme', tag: 'Govt Subsidy Eligible' },
+    { name: 'ALMM Approved Modules', tag: 'DCR Compliant For Subsidy' },
+    { name: '25-Year Panel Warranty', tag: 'Long-Term Reliability' },
     { name: 'ISO 9001:2015', tag: 'Quality Guaranteed' },
   ];
 

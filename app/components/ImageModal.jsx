@@ -45,7 +45,7 @@ export default function ImageModal({ src, onClose }) {
         </div>
 
         <div className="text-center text-xs text-slate-400 pt-1">
-          Scroll or zoom inside modal to view detailed diagrams. Powered by APN Solar technology.
+          Scroll or zoom inside modal to view detailed diagrams. Powered by certified solar technology.
         </div>
       </div>
     </div>

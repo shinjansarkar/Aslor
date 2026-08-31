@@ -72,7 +72,7 @@ export default function SolarSolutionsCatalog({ onOpenLightbox }) {
 
   const componentsList = [
     {
-      name: 'APN Solar Smart Inverters',
+      name: 'Certified Solar Smart Inverters',
       desc: 'High-efficiency micro and string inverters with real-time app monitoring, MPPT tracking, and IP65 casing.',
       icon: Cpu
     },

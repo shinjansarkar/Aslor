@@ -17,7 +17,7 @@ export default function B2CSection({ onSelectTrack }) {
       icon: IndianRupee,
       title: 'Direct Government Subsidies',
       desc: 'Full assistance with seamless registration and direct benefit transfer (DBT) under the PM Surya Ghar: Muft Bijli Yojana.',
-      tag: 'Up to ₹78,000 Direct Subsidy'
+      tag: 'Direct Govt Subsidy'
     },
     {
       icon: Zap,
@@ -28,7 +28,7 @@ export default function B2CSection({ onSelectTrack }) {
     {
       icon: ShieldCheck,
       title: 'Reliable Quality',
-      desc: 'Backed by APN Solar’s trusted, BIS and ISO-certified manufacturing standards for maximum power generation and 25-year panel longevity.',
+      desc: 'Backed by trusted, BIS and ISO-certified manufacturing standards for maximum power generation and 25-year panel longevity.',
       tag: 'BIS & ISO Certified'
     },
     {
@@ -72,7 +72,7 @@ export default function B2CSection({ onSelectTrack }) {
                 Official PM Surya Ghar Subsidy Structure
               </span>
               <h3 className="text-2xl md:text-3xl font-light text-white">
-                Get Up To <span className="font-serif-title italic text-amber-300">₹78,000 Direct Subsidy</span> from Govt of India
+                Claim Direct <span className="font-serif-title italic text-amber-300">Govt Subsidies</span> from Govt of India
               </h3>
               <p className="text-xs text-neutral-400 leading-relaxed">
                 Under the PM Surya Ghar: Muft Bijli Yojana, households receive direct bank transfer subsidies for installations up to 3kW capacity.
@@ -91,7 +91,7 @@ export default function B2CSection({ onSelectTrack }) {
                 </div>
                 <div className="p-3 rounded-xl bg-amber-950/30 border border-amber-500/30 text-center">
                   <div className="text-xs text-amber-200">3 kW System</div>
-                  <div className="text-base font-bold text-amber-300">₹78,000</div>
+                  <div className="text-base font-bold text-amber-300">Govt Cap</div>
                   <div className="text-[10px] text-amber-200/60">Max Subsidy</div>
                 </div>
               </div>

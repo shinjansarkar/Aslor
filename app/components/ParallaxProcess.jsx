@@ -23,9 +23,9 @@ export default function ParallaxProcess() {
     {
       num: '03',
       title: 'Certified Site Execution',
-      actor: 'APN Solar Team',
+      actor: 'Certified EPC Team',
       icon: Wrench,
-      desc: 'APN Solar specialized engineering team manages equipment delivery, inverter setup, and net-metering.',
+      desc: 'Our specialized engineering team manages equipment delivery, inverter setup, and net-metering.',
     },
     {
       num: '04',

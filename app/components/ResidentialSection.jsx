@@ -8,7 +8,7 @@ export default function ResidentialSection({ onSelectTrack }) {
     {
       icon: ShieldCheck,
       title: 'Direct Government Subsidies',
-      desc: 'Full assistance with seamless registration and direct benefit transfer (DBT) under the PM Surya Ghar: Muft Bijli Yojana (up to ₹78,000 subsidy).',
+      desc: 'Full assistance with seamless registration and direct benefit transfer (DBT) under the PM Surya Ghar: Muft Bijli Yojana.',
     },
     {
       icon: PiggyBank,
@@ -18,7 +18,7 @@ export default function ResidentialSection({ onSelectTrack }) {
     {
       icon: Zap,
       title: 'Reliable Quality',
-      desc: 'Backed by APN Solar’s trusted, BIS and ISO-certified manufacturing standards for 25+ years of trouble-free generation.',
+      desc: 'Backed by trusted, BIS and ISO-certified manufacturing standards for 25+ years of trouble-free generation.',
     },
     {
       icon: Wrench,
@@ -77,7 +77,7 @@ export default function ResidentialSection({ onSelectTrack }) {
                   <CheckCircle2 className="w-4 h-4 text-solvix-leafPillBg" /> PM Surya Ghar Scheme Partner
                 </span>
                 <span className="text-[10px] text-neutral-300 font-bold bg-black/40 px-2.5 py-1 rounded-full border border-white/10">
-                  Subsidies Up to ₹78,000
+                  Govt Subsidies Available
                 </span>
               </div>
             </div>

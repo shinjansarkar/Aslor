@@ -1,9 +1,9 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Aslor Enterprises | Authorized APN Solar Partner | West Bengal',
+  title: 'Aslor Enterprises | Premier Solar Partner | West Bengal',
   description:
-    'Aslor Enterprises - Authorized Franchise Partner of APN Solar. World-class rooftop solar & commercial EPC solutions across Siliguri & West Bengal. Claim PM Surya Ghar Subsidies.',
+    'Aslor Enterprises - Premier Solar Energy Partner. World-class rooftop solar & commercial EPC solutions across Siliguri & West Bengal. Claim PM Surya Ghar Subsidies.',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/logo.webp',

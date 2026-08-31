@@ -18,7 +18,7 @@ export default function ServicesSection({ onSelectTrack }) {
     {
       icon: Home,
       title: 'Residential Solar',
-      desc: 'Tailored home solar setups with panels, inverters, and net-metering. Eligible for up to ₹78,000 PM Surya Ghar Govt Subsidies.',
+      desc: 'Tailored home solar setups with panels, inverters, and net-metering. Eligible for PM Surya Ghar Govt Subsidies.',
       track: 'Residential Rooftop (Home)',
     },
     {

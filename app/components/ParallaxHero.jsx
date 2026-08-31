@@ -74,7 +74,7 @@ export default function ParallaxHero({ onSelectTrack }) {
             >
               <ShieldCheck className="w-4 h-4 text-lime-400" />
               <span>
-                Authorized Franchise Partner of <strong className="text-white">APN Solar</strong>
+                Premier Solar Energy Partner
               </span>
               <span className="text-neutral-500">•</span>
               <span className="text-lime-300">Siliguri, West Bengal</span>
@@ -146,14 +146,14 @@ export default function ParallaxHero({ onSelectTrack }) {
                     className="w-10 h-10 rounded-full object-cover border-2 border-[#050806]"
                   />
                   <div className="w-10 h-10 rounded-full bg-lime-400 text-black font-extrabold text-xs flex items-center justify-center border-2 border-[#050806]">
-                    ₹78K
+                    Govt
                   </div>
                 </div>
                 <div className="text-xs text-neutral-300">
                   <strong className="text-white font-bold block">
                     PM Surya Ghar: Muft Bijli Yojana
                   </strong>
-                  Direct bank transfer subsidy up to ₹78,000 for WB homeowners.
+                  Direct bank transfer government subsidy for WB homeowners.
                 </div>
               </div>
             </motion.div>
@@ -196,7 +196,7 @@ export default function ParallaxHero({ onSelectTrack }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-neutral-300 bg-black/70 backdrop-blur-md p-2.5 rounded-xl border border-white/10">
                   <span>Siliguri Solar Installation</span>
-                  <span className="text-lime-400 font-semibold">APN Certified</span>
+                  <span className="text-lime-400 font-semibold">Certified EPC</span>
                 </div>
               </div>
 

@@ -21,7 +21,7 @@ export default function Header({ onSelectTrack }) {
       <div className="bg-[#121714] text-neutral-300 text-xs py-2 px-4 text-center border-b border-white/5 flex items-center justify-center gap-2">
         <span className="w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
         <span>
-          <strong>Authorized Franchise Partner of APN Solar</strong> • PM Surya Ghar Subsidies Up To <strong className="text-lime-300">₹78,000</strong>
+          <strong>Premier Solar Energy Partner</strong> • PM Surya Ghar Direct Govt Subsidies
         </span>
         <span className="hidden sm:inline text-neutral-500">• Siliguri & West Bengal</span>
       </div>
@@ -46,7 +46,7 @@ export default function Header({ onSelectTrack }) {
               </span>
             </div>
             <p className="text-[10px] text-neutral-400 flex items-center gap-1 font-medium">
-              <ShieldCheck className="w-3 h-3 text-lime-400 inline" /> APN Solar Partner
+              <ShieldCheck className="w-3 h-3 text-lime-400 inline" /> Certified Solar Partner
             </p>
           </div>
         </a>

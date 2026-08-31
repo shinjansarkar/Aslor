@@ -22,16 +22,16 @@ export default function AslorProcess() {
     {
       num: '03',
       title: 'Expert Site Execution',
-      actor: 'APN Solar Team',
+      actor: 'Certified EPC Team',
       icon: Wrench,
-      desc: 'APN Solar’s specialized engineering team handles site survey, equipment delivery, and installation.',
+      desc: 'Our specialized engineering team handles site survey, equipment delivery, and installation.',
     },
     {
       num: '04',
       title: 'Long-Term Warranties',
       actor: 'Aslor Enterprises (Siliguri)',
       icon: ShieldCheck,
-      desc: 'Dedicated local partner supporting you, backed by APN Solar’s 25-year panel performance warranties.',
+      desc: 'Dedicated local partner supporting you, backed by 25-year panel performance warranties.',
     },
   ];
 

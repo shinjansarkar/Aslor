@@ -20,9 +20,9 @@ export default function ParallaxServices({ onSelectTrack }) {
       icon: Home,
       title: 'Residential Solar',
       subtitle: 'PM Surya Ghar Subsidies',
-      desc: 'High-efficiency rooftop setups for households. Claim direct bank transfer subsidies up to ₹78,000 and eliminate monthly electricity bills.',
+      desc: 'High-efficiency rooftop setups for households. Claim direct bank transfer subsidies and eliminate monthly electricity bills.',
       track: 'Residential Rooftop (Home)',
-      tag: 'Up to ₹78K Direct Subsidy',
+      tag: 'Direct Govt Subsidy',
     },
     {
       icon: Building2,

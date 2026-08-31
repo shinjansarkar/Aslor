@@ -92,7 +92,7 @@ export default function ContactFormSection({ prefillData, selectedTrack }) {
                   <span className="font-extrabold text-white text-lg">ASLOR ENTERPRISES</span>
                 </div>
                 <p className="text-xs text-lime-400 font-semibold">
-                  Authorized Franchise Partner of APN Solar
+                  Premier Solar Energy Partner
                 </p>
               </div>
 

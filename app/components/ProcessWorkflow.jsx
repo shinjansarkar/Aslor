@@ -20,14 +20,14 @@ export default function ProcessWorkflow() {
     {
       step: '03',
       icon: HardHat,
-      title: 'Expert Execution & Installation (APN Solar)',
-      desc: 'Once booked, APN Solar’s specialized engineering team steps in to handle the complete site survey, equipment delivery, and professional installation.',
+      title: 'Expert Execution & Installation',
+      desc: 'Once booked, our specialized engineering team steps in to handle the complete site survey, equipment delivery, and professional installation.',
     },
     {
       step: '04',
       icon: ShieldCheck,
       title: 'Long-Term Support',
-      desc: 'You have a local partner right here in West Bengal supporting you, backed by APN Solar’s trusted manufacturing warranty and standards.',
+      desc: 'You have a local partner right here in West Bengal supporting you, backed by trusted manufacturing warranty and standards.',
     },
   ];
 
@@ -41,7 +41,7 @@ export default function ProcessWorkflow() {
           How We Work with You
         </h2>
         <p className="text-xs sm:text-sm text-solvix-textMuted font-medium">
-          The Aslor Enterprises & APN Solar step-by-step installation process.
+          The Aslor Enterprises step-by-step installation process.
         </p>
       </div>
 

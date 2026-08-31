@@ -26,10 +26,10 @@ export default function Header({ onSelectTrack }) {
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-solvix-leaf animate-pulse" />
           <span className="font-medium text-solvix-textDark">
-            Authorized Franchise Partner of <strong>APN Solar</strong>
+            Premier Solar EPC & Rooftop Solutions
           </span>
           <span className="text-solvix-border">•</span>
-          <span className="text-solvix-leafDark font-semibold">PM Surya Ghar Subsidies Up To ₹78,000</span>
+          <span className="text-solvix-leafDark font-semibold">PM Surya Ghar Direct Govt Subsidies</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
           <span>Siliguri & West Bengal</span>
@@ -57,7 +57,7 @@ export default function Header({ onSelectTrack }) {
               </span>
             </div>
             <p className="text-[10px] text-solvix-textMuted font-medium flex items-center gap-1">
-              <ShieldCheck className="w-3 h-3 text-solvix-leaf inline" /> APN Partner
+              <ShieldCheck className="w-3 h-3 text-solvix-leaf inline" /> Certified Solar Partner
             </p>
           </div>
         </a>

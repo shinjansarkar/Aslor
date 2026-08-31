@@ -22,7 +22,7 @@ export default function HeroSection({ onSelectTrack }) {
           {/* Solvix Top Pill Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E0ECCA] text-[#2E5718] text-xs font-bold uppercase tracking-wider shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#76A737] animate-ping" />
-            <span>Authorized Franchise Partner of APN Solar</span>
+            <span>Authorized Solar Energy Solutions</span>
           </div>
 
           {/* Main Headline */}
@@ -32,7 +32,7 @@ export default function HeroSection({ onSelectTrack }) {
 
           {/* Sub-headline */}
           <p className="text-sm sm:text-base text-solvix-textMuted max-w-2xl leading-relaxed font-medium">
-            Welcome to <strong className="text-solvix-forest">Aslor Enterprises</strong>—Authorized Franchise Partner of APN Solar. We deliver world-class rooftop solar installations for households and high-capacity engineering, procurement, and construction (EPC) solutions for commercial industries.
+            Welcome to <strong className="text-solvix-forest">Aslor Enterprises</strong>—Premier Solar Energy Partner. We deliver world-class rooftop solar installations for households and high-capacity engineering, procurement, and construction (EPC) solutions for commercial industries.
           </p>
 
           {/* Dual Call-to-Action Buttons */}
@@ -66,16 +66,16 @@ export default function HeroSection({ onSelectTrack }) {
                 PM Surya
               </span>
               <span className="text-[11px] sm:text-xs text-solvix-textMuted font-semibold block">
-                Up to ₹78k Subsidy
+                Direct Govt Subsidy
               </span>
             </div>
 
             <div className="bg-white p-4 rounded-2xl border border-solvix-border shadow-sm text-center sm:text-left hover:border-solvix-leaf transition-all">
               <span className="block text-2xl sm:text-3xl font-extrabold text-solvix-forest tracking-tight">
-                APN Solar
+                Turnkey EPC
               </span>
               <span className="text-[11px] sm:text-xs text-solvix-textMuted font-semibold block">
-                Certified Franchise
+                Certified Installation
               </span>
             </div>
 
@@ -103,7 +103,7 @@ export default function HeroSection({ onSelectTrack }) {
             {/* Floating Top Badge */}
             <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-bold text-solvix-forest shadow-sm flex items-center gap-1.5 border border-white/60">
               <Sun className="w-3.5 h-3.5 text-solvix-leafDark" />
-              <span>APN Solar Engineering Standards</span>
+              <span>Certified Solar Engineering Standards</span>
             </div>
 
             {/* Bottom Subtle Glass Indicator */}

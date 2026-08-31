@@ -18,7 +18,7 @@ export default function WhyChooseAslor() {
           </h2>
 
           <p className="text-neutral-400 text-base leading-relaxed">
-            Authorized APN Solar Franchise Partner bringing advanced solar technology directly to homes and businesses across West Bengal.
+            Premier solar energy partner bringing advanced solar technology directly to homes and businesses across West Bengal.
           </p>
         </div>
 
@@ -30,12 +30,12 @@ export default function WhyChooseAslor() {
             <div className="w-12 h-12 rounded-2xl bg-lime-400/10 border border-lime-400/20 flex items-center justify-center text-lime-400">
               <ShieldCheck className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Authorized Partnership</h3>
+            <h3 className="text-xl font-semibold text-white">Certified Partnership</h3>
             <p className="text-xs text-neutral-400 leading-relaxed">
-              Proud franchise partner of <strong className="text-white">APN Solar</strong>, bringing advanced solar technology and reliable manufacturing standards directly to your doorstep.
+              Premier solar energy partner, bringing advanced solar technology and reliable manufacturing standards directly to your doorstep.
             </p>
             <div className="pt-2 text-xs font-medium text-lime-300 flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-lime-400" /> APN Solar National Standards
+              <CheckCircle2 className="w-4 h-4 text-lime-400" /> National Quality Standards
             </div>
           </div>
 

@@ -112,7 +112,7 @@ export default function B2BSection({ onSelectTrack }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-neutral-300 bg-black/60 backdrop-blur-md p-2.5 rounded-xl border border-white/10">
                   <span>Aslor Commercial Solar Site Execution</span>
-                  <span className="text-lime-400 font-semibold">APN Solar Certified</span>
+                  <span className="text-lime-400 font-semibold">Certified Solar EPC</span>
                 </div>
               </div>
             </div>

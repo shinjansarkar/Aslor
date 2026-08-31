@@ -96,7 +96,7 @@ export default function ContactSection({ selectedTrack, prefillData }) {
                   <ShieldCheck className="w-5 h-5 text-solvix-leafDark" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-solvix-forest block">Authorized APN Partnership</span>
+                  <span className="text-xs font-bold text-solvix-forest block">Certified Solar Partnership</span>
                   <span className="text-xs text-solvix-textMuted font-medium">Single Point of Contact for Booking & Support</span>
                 </div>
               </div>

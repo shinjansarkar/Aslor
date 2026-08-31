@@ -63,7 +63,7 @@ export default function BenefitSection({ onSelectTrack }) {
                   <ShieldCheck className="w-4 h-4 text-solvix-leafPillBg" /> 25-Year Warranty Guarantee
                 </span>
                 <span className="text-[10px] text-neutral-300 font-bold bg-black/40 px-2 py-0.5 rounded-full border border-white/10">
-                  APN Partner
+                  Certified Partner
                 </span>
               </div>
             </div>

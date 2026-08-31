@@ -44,7 +44,7 @@ export default function ProjectsShowcase({ onSelectTrack }) {
       capacity: '200 kW Commercial Rooftop',
       savings: '₹1,80,000 / month saved',
       image: '/aslor-rooftop-team.webp',
-      tags: ['Urban Infrastructure', 'Turnkey EPC', 'APN Solar'],
+      tags: ['Urban Infrastructure', 'Turnkey EPC', 'Solar Power'],
       desc: 'Heavy-duty commercial solar EPC engineered for high structural wind loads and maximum solar harvest in urban environments.',
     },
   ];
@@ -162,7 +162,7 @@ export default function ProjectsShowcase({ onSelectTrack }) {
 
             <div className="p-2 flex items-center justify-between text-xs font-semibold text-solvix-textDark">
               <span className="flex items-center gap-1 text-solvix-forest">
-                <Zap className="w-4 h-4 text-solvix-leaf fill-solvix-leaf" /> System Specs: APN Solar Certified EPC
+                <Zap className="w-4 h-4 text-solvix-leaf fill-solvix-leaf" /> System Specs: Certified Solar EPC
               </span>
               <span className="text-solvix-textMuted">Project 0{activeIdx + 1} of 04</span>
             </div>

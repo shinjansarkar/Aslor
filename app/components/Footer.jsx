@@ -27,7 +27,7 @@ export default function Footer() {
                   ASLOR SOLAR
                 </span>
                 <p className="text-[10px] text-solvix-leafPillBg font-bold">
-                  APN Solar Authorized Franchise Partner
+                  Premier Solar Energy Partner
                 </p>
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-400 font-medium">
-          <p>© {new Date().getFullYear()} Aslor Enterprises. Authorized Franchise Partner of APN Solar. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Aslor Enterprises. Premier Solar Energy Partner. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="#hero" className="hover:text-white transition-colors">
               Privacy Policy

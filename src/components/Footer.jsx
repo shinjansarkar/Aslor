@@ -19,7 +19,7 @@ export default function Footer() {
               <img src="/logo.webp" alt="Aslor Logo" className="h-8 w-auto object-contain" />
               <div>
                 <div className="text-lg font-bold text-white tracking-tight">ASLOR ENTERPRISES</div>
-                <div className="text-xs text-lime-400 font-semibold">Authorized Partner of APN Solar</div>
+                <div className="text-xs text-lime-400 font-semibold">Premier Solar Energy Partner</div>
               </div>
             </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-3.5 h-3.5 text-lime-400 shrink-0" />
-                <span>APN Solar Franchise ID Verified</span>
+                <span>Certified Solar Partner</span>
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
           <div>
-            © {new Date().getFullYear()} <strong>Aslor Enterprises</strong>. Authorized Partner of APN Solar. All Rights Reserved.
+            © {new Date().getFullYear()} <strong>Aslor Enterprises</strong>. Premier Solar Energy Partner. All Rights Reserved.
           </div>
 
           <button 

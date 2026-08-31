@@ -68,7 +68,7 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
                 Govt Subsidy Direct Bank Transfer
               </span>
               <span className="text-[11px] text-solvix-textMuted font-medium">
-                Claim up to ₹78,000 direct subsidy
+                Claim direct government subsidy
               </span>
             </div>
           </div>

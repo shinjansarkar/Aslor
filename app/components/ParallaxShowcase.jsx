@@ -51,7 +51,7 @@ export default function ParallaxShowcase({ onSelectTrack }) {
             </h2>
 
             <p className="text-neutral-300 text-base md:text-lg leading-relaxed max-w-xl">
-              We’ve completed over 5,000 installations across West Bengal. As APN Solar’s authorized franchise partner, our commitment to technical precision, DISCOM net-metering compliance, and 25-year panel longevity remains unmatched.
+              We’ve completed over 5,000 installations across West Bengal. As a premier solar energy partner, our commitment to technical precision, DISCOM net-metering compliance, and 25-year panel longevity remains unmatched.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -87,9 +87,9 @@ export default function ParallaxShowcase({ onSelectTrack }) {
           >
             <div className="card-parallax p-6 space-y-2 text-left backdrop-blur-2xl">
               <Award className="w-8 h-8 text-lime-400 mb-2" />
-              <div className="text-3xl font-bold text-white tracking-tight">₹78,000</div>
+              <div className="text-3xl font-bold text-white tracking-tight">Govt</div>
               <div className="text-xs text-neutral-300 font-medium">
-                Max PM Surya Ghar Subsidy
+                PM Surya Ghar Subsidy
               </div>
               <p className="text-[11px] text-neutral-400">Direct bank benefit transfer</p>
             </div>

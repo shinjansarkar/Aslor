@@ -31,7 +31,7 @@ export default function HeroSection({ onSelectTrack }) {
             {/* Top Pill Tag */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-neutral-300">
               <ShieldCheck className="w-4 h-4 text-lime-400" />
-              <span>Authorized Franchise Partner of <strong className="text-white">APN Solar</strong></span>
+              <span>Premier Solar Energy Partner</span>
               <span className="text-neutral-500">•</span>
               <span className="text-lime-300">Siliguri, West Bengal</span>
             </div>
@@ -75,11 +75,11 @@ export default function HeroSection({ onSelectTrack }) {
                 <div className="flex -space-x-2">
                   <img src="/aslor-rooftop-team.webp" alt="Team" className="w-9 h-9 rounded-full object-cover border-2 border-[#0a0d0b]" />
                   <div className="w-9 h-9 rounded-full bg-lime-400 text-black font-extrabold text-xs flex items-center justify-center border-2 border-[#0a0d0b]">
-                    ₹78K
+                    Govt
                   </div>
                 </div>
                 <div className="text-xs text-neutral-300">
-                  <strong className="text-white font-bold">PM Surya Ghar Subsidy:</strong> Direct benefit transfer up to ₹78,000 for WB homeowners.
+                  <strong className="text-white font-bold">PM Surya Ghar Subsidy:</strong> Direct benefit transfer government subsidy for WB homeowners.
                 </div>
               </div>
             </div>
