@@ -112,11 +112,10 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
                   <button
                     key={val}
                     onClick={() => setMonthlyBill(val)}
-                    className={`text-xs font-bold px-3 py-1.5 rounded-full border transition-all ${
-                      monthlyBill === val
+                    className={`text-xs font-bold px-3 py-1.5 rounded-full border transition-all ${monthlyBill === val
                         ? 'bg-solvix-forest text-white border-solvix-forest'
                         : 'bg-solvix-bgDark text-solvix-forest border-solvix-border hover:border-solvix-leaf'
-                    }`}
+                      }`}
                   >
                     ₹{val.toLocaleString('en-IN')}
                   </button>
@@ -132,7 +131,7 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-solvix-forest">
                 <CheckCircle className="w-4 h-4 text-solvix-leafDark shrink-0" />
-                25-Year Performance Warranty on Solar PV Modules
+                27-Year Performance Warranty on Solar PV Modules
               </div>
             </div>
           </div>
@@ -150,7 +149,7 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
               </div>
 
               {/* Grid 2x2 Outputs */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div className="bg-[#1F452E] p-4 rounded-2xl border border-white/10">
                   <span className="text-[11px] text-neutral-300 font-semibold block">
                     Govt Subsidy (Claimable)

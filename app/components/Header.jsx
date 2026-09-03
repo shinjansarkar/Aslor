@@ -44,8 +44,8 @@ export default function Header({ onSelectTrack }) {
       <div className="max-w-7xl mx-auto px-5 py-3 rounded-full bg-white/90 backdrop-blur-xl border border-solvix-border flex items-center justify-between shadow-md">
         {/* Brand Logo */}
         <a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo('hero'); }} className="flex items-center gap-3 group">
-          <div className="p-1.5 rounded-xl bg-solvix-bgDark border border-solvix-border group-hover:border-solvix-leaf transition-all shrink-0">
-            <img src="/logo.webp" alt="Aslor Solar Logo" className="h-7 w-auto object-contain" />
+          <div className="p-1 rounded-xl bg-solvix-bgDark border border-solvix-border group-hover:border-solvix-leaf transition-all shrink-0">
+            <img src="/logo.webp" alt="Aslor Enterprises Logo" className="h-10 sm:h-11 w-auto object-contain" />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
@@ -53,7 +53,7 @@ export default function Header({ onSelectTrack }) {
                 ASLOR
               </span>
               <span className="text-[9px] font-bold text-solvix-leafDark px-1.5 py-0.5 rounded bg-solvix-leafPillBg border border-solvix-leafPillBg">
-                SOLAR
+                ENTERPRISES
               </span>
             </div>
             <p className="text-[10px] text-solvix-textMuted font-medium flex items-center gap-1">

@@ -8,14 +8,14 @@ export default function TrustTicker() {
     { name: 'MNRE Registered Partner', tag: 'Govt Approved' },
     { name: 'PM Surya Ghar Scheme', tag: 'Govt Subsidy Eligible' },
     { name: 'ALMM Approved Modules', tag: 'DCR Compliant For Subsidy' },
-    { name: '25-Year Panel Warranty', tag: 'Long-Term Reliability' },
+    { name: '27-Year Panel Warranty', tag: 'Long-Term Reliability' },
     { name: 'ISO 9001:2015', tag: 'Quality Guaranteed' },
   ];
 
   return (
     <section className="py-6 border-y border-solvix-border bg-white/50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="flex flex-wrap items-center justify-between gap-6 opacity-85">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 opacity-90">
           {partners.map((partner, idx) => (
             <div key={idx} className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-full bg-solvix-leafPillBg text-solvix-leafText flex items-center justify-center shrink-0 font-bold text-xs">

@@ -20,11 +20,11 @@ export default function Footer() {
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <div className="p-1.5 rounded-xl bg-white/10 border border-white/15">
-                <img src="/logo.webp" alt="Aslor Logo" className="h-7 w-auto" />
+                <img src="/logo.webp" alt="Aslor Enterprises Big Logo" className="h-11 sm:h-12 w-auto object-contain" />
               </div>
               <div>
                 <span className="font-extrabold text-lg text-white tracking-tight">
-                  ASLOR SOLAR
+                  ASLOR ENTERPRISES
                 </span>
                 <p className="text-[10px] text-solvix-leafPillBg font-bold">
                   Premier Solar Energy Partner
@@ -33,7 +33,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-neutral-300 max-w-sm leading-relaxed font-medium">
-              Empowering homes, commercial enterprises, and agriculture across West Bengal with world-class rooftop solar EPC, PM Surya Ghar subsidies, and 25-year panel performance guarantees.
+              Empowering homes, commercial enterprises, and agriculture across West Bengal with world-class rooftop solar EPC, PM Surya Ghar subsidies, and 27-year panel performance guarantees.
             </p>
           </div>
 
@@ -95,7 +95,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-400 font-medium">
-          <p>© {new Date().getFullYear()} Aslor Enterprises. Premier Solar Energy Partner. All rights reserved.</p>
+          <p className="text-center sm:text-left">© {new Date().getFullYear()} Aslor Enterprises. Premier Solar Energy Partner. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="#hero" className="hover:text-white transition-colors">
               Privacy Policy

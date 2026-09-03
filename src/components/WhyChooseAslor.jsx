@@ -46,7 +46,7 @@ export default function WhyChooseAslor() {
             </div>
             <h3 className="text-xl font-semibold text-white">Certified Technology</h3>
             <p className="text-xs text-neutral-400 leading-relaxed">
-              Utilizing top-tier modules carrying <strong className="text-amber-300">ISO, BIS, and TUV-Rheinland</strong> safety and performance certifications for guaranteed 25-year power yield.
+              Utilizing top-tier modules carrying <strong className="text-amber-300">ISO, BIS, and TUV-Rheinland</strong> safety and performance certifications for guaranteed 27-year power yield.
             </p>
             <div className="pt-2 text-xs font-medium text-amber-300 flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-amber-400" /> ISO / BIS / TUV Certified

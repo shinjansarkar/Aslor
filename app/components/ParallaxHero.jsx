@@ -216,7 +216,7 @@ export default function ParallaxHero({ onSelectTrack }) {
                     <span className="text-[10px] text-neutral-400">Warranty Coverage</span>
                     <Zap className="w-3.5 h-3.5 text-amber-400" />
                   </div>
-                  <div className="text-lg font-bold text-amber-300 tracking-tight">25 Years</div>
+                  <div className="text-lg font-bold text-amber-300 tracking-tight">27 Years</div>
                   <div className="text-[10px] text-neutral-400">ISO / BIS Certified</div>
                 </div>
               </div>

@@ -60,7 +60,7 @@ export default function HeroSection({ onSelectTrack }) {
           </div>
 
           {/* Key Trust Stats */}
-          <div className="grid grid-cols-3 gap-4 pt-6 border-t border-solvix-border max-w-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-6 border-t border-solvix-border max-w-lg">
             <div className="bg-white p-4 rounded-2xl border border-solvix-border shadow-sm text-center sm:text-left hover:border-solvix-leaf transition-all">
               <span className="block text-2xl sm:text-3xl font-extrabold text-solvix-forest tracking-tight">
                 PM Surya
@@ -81,7 +81,7 @@ export default function HeroSection({ onSelectTrack }) {
 
             <div className="bg-white p-4 rounded-2xl border border-solvix-border shadow-sm text-center sm:text-left hover:border-solvix-leaf transition-all">
               <span className="block text-2xl sm:text-3xl font-extrabold text-solvix-leafDark tracking-tight">
-                25-Yr
+                27-Yr
               </span>
               <span className="text-[11px] sm:text-xs text-solvix-textMuted font-semibold block">
                 Linear Warranty
@@ -90,20 +90,43 @@ export default function HeroSection({ onSelectTrack }) {
           </div>
         </div>
 
-        {/* Right Column Photography Card */}
-        <div className="lg:col-span-5 relative">
+        {/* Right Column Photography & Big Brand Logo Showcase Card */}
+        <div className="lg:col-span-5 space-y-4">
+          {/* Big Featured Logo Card */}
+          <div className="bg-white p-6 rounded-3xl border border-solvix-border shadow-md flex items-center gap-5 hover:border-solvix-leaf transition-all">
+            <div className="p-3 bg-solvix-bgDark rounded-2xl border border-solvix-border shrink-0">
+              <img
+                src="/logo.webp"
+                alt="Aslor Enterprises Big Logo"
+                className="w-24 sm:w-28 h-auto object-contain"
+              />
+            </div>
+            <div>
+              <span className="text-[10px] font-extrabold text-solvix-leafDark uppercase tracking-widest block mb-1">
+                // CERTIFIED PARTNER
+              </span>
+              <h3 className="text-xl font-extrabold text-solvix-forest tracking-tight leading-none mb-1">
+                ASLOR ENTERPRISES
+              </h3>
+              <p className="text-xs text-solvix-textMuted font-medium">
+                Premier Solar Energy Solutions in Siliguri & West Bengal
+              </p>
+            </div>
+          </div>
+
+          {/* Main Visual Image Frame */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl border border-solvix-border bg-white group">
             <img
               src="/solar-hero.png"
               alt="Aslor Enterprises Solar Architecture"
-              className="w-full h-[420px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[320px] sm:h-[360px] object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-solvix-forest/50 via-transparent to-transparent opacity-70" />
+            <div className="absolute inset-0 bg-gradient-to-t from-solvix-forest/60 via-transparent to-transparent opacity-80" />
 
             {/* Floating Top Badge */}
             <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-bold text-solvix-forest shadow-sm flex items-center gap-1.5 border border-white/60">
               <Sun className="w-3.5 h-3.5 text-solvix-leafDark" />
-              <span>Certified Solar Engineering Standards</span>
+              <span>Certified Engineering Standards</span>
             </div>
 
             {/* Bottom Subtle Glass Indicator */}

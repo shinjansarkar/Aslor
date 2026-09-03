@@ -18,7 +18,7 @@ export default function ResidentialSection({ onSelectTrack }) {
     {
       icon: Zap,
       title: 'Reliable Quality',
-      desc: 'Backed by trusted, BIS and ISO-certified manufacturing standards for 25+ years of trouble-free generation.',
+      desc: 'Backed by trusted, BIS and ISO-certified manufacturing standards for 27+ years of trouble-free generation.',
     },
     {
       icon: Wrench,

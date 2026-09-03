@@ -28,7 +28,7 @@ export default function B2CSection({ onSelectTrack }) {
     {
       icon: ShieldCheck,
       title: 'Reliable Quality',
-      desc: 'Backed by trusted, BIS and ISO-certified manufacturing standards for maximum power generation and 25-year panel longevity.',
+      desc: 'Backed by trusted, BIS and ISO-certified manufacturing standards for maximum power generation and 27-year panel longevity.',
       tag: 'BIS & ISO Certified'
     },
     {

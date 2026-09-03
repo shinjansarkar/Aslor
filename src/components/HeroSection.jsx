@@ -107,7 +107,7 @@ export default function HeroSection({ onSelectTrack }) {
             {/* Bottom 3 Stat Widgets matching Solaris reference */}
             <div className="grid grid-cols-3 gap-3">
               <div className="p-4 rounded-2xl bg-[#121614] border border-white/10 text-left">
-                <div className="text-2xl font-bold text-white tracking-tight">25+</div>
+                <div className="text-2xl font-bold text-white tracking-tight">27+</div>
                 <div className="text-[11px] text-neutral-400">Years Warranty</div>
               </div>
 

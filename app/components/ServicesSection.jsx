@@ -36,7 +36,7 @@ export default function ServicesSection({ onSelectTrack }) {
     {
       icon: Wrench,
       title: 'Ongoing Support',
-      desc: 'Ensure peak performance with local Siliguri maintenance, DISCOM net-metering coordination, and 25-year panel warranties.',
+      desc: 'Ensure peak performance with local Siliguri maintenance, DISCOM net-metering coordination, and 27-year panel warranties.',
       track: 'Residential Rooftop (Home)',
     },
   ];

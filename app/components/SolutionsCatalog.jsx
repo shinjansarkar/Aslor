@@ -10,7 +10,7 @@ export default function SolutionsCatalog({ onSelectTrack }) {
       title: 'Residential Rooftop Solar',
       subtitle: 'PM Surya Ghar Direct Govt Subsidies',
       tag: 'Homeowners',
-      features: ['Up to 90% Bill Reduction', '25-Year Panel Warranty', 'Net Metering Included'],
+      features: ['Up to 90% Bill Reduction', '27-Year Panel Warranty', 'Net Metering Included'],
       track: 'Residential Rooftop (Home)',
       image: '/solar-hero.png',
     },

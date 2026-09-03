@@ -29,10 +29,10 @@ export default function ParallaxProcess() {
     },
     {
       num: '04',
-      title: '25-Year Support & Warranty',
+      title: '27-Year Support & Warranty',
       actor: 'Aslor Siliguri Hub',
       icon: ShieldCheck,
-      desc: 'Dedicated local service team backing your plant with 25-year panel performance guarantees.',
+      desc: 'Dedicated local service team backing your plant with 27-year panel performance guarantees.',
     },
   ];
 

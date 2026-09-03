@@ -51,7 +51,7 @@ export default function ParallaxShowcase({ onSelectTrack }) {
             </h2>
 
             <p className="text-neutral-300 text-base md:text-lg leading-relaxed max-w-xl">
-              We’ve completed over 5,000 installations across West Bengal. As a premier solar energy partner, our commitment to technical precision, DISCOM net-metering compliance, and 25-year panel longevity remains unmatched.
+              We’ve completed over 5,000 installations across West Bengal. As a premier solar energy partner, our commitment to technical precision, DISCOM net-metering compliance, and 27-year panel longevity remains unmatched.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">

@@ -42,7 +42,7 @@ export default function ParallaxServices({ onSelectTrack }) {
     {
       icon: Wrench,
       title: 'Ongoing Support & Net-Metering',
-      desc: 'From initial DISCOM net-metering approval (WBSEDCL) to local Siliguri maintenance, we ensure smooth operation for 25+ years.',
+      desc: 'From initial DISCOM net-metering approval (WBSEDCL) to local Siliguri maintenance, we ensure smooth operation for 27+ years.',
       track: 'Residential Rooftop (Home)',
       tag: 'Local Siliguri Hub Support',
     },

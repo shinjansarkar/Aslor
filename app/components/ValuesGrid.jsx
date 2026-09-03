@@ -13,7 +13,7 @@ export default function ValuesGrid() {
     {
       icon: Sprout,
       title: 'Sustainability',
-      desc: '100% eco-friendly energy generation designed for 25+ years of zero-emission power.',
+      desc: '100% eco-friendly energy generation designed for 27+ years of zero-emission power.',
     },
     {
       icon: HeartHandshake,
@@ -30,7 +30,7 @@ export default function ValuesGrid() {
             // OUR VALUES
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-solvix-forest tracking-tight">
-            Our Values At Aslor Solar
+            Our Values At Aslor Enterprises
           </h2>
         </div>
         <p className="text-xs sm:text-sm text-solvix-textMuted max-w-md font-medium">

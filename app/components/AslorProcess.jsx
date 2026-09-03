@@ -31,7 +31,7 @@ export default function AslorProcess() {
       title: 'Long-Term Warranties',
       actor: 'Aslor Enterprises (Siliguri)',
       icon: ShieldCheck,
-      desc: 'Dedicated local partner supporting you, backed by 25-year panel performance warranties.',
+      desc: 'Dedicated local partner supporting you, backed by 27-year panel performance warranties.',
     },
   ];
 

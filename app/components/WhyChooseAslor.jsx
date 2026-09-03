@@ -13,7 +13,7 @@ export default function WhyChooseAslor() {
     {
       icon: Award,
       title: 'Certified Technology',
-      desc: 'Utilizing top-tier modules carrying ISO, BIS, and TUV-Rheinland safety and performance certifications for 25+ years of high output.',
+      desc: 'Utilizing top-tier modules carrying ISO, BIS, and TUV-Rheinland safety and performance certifications for 27+ years of high output.',
     },
     {
       icon: MapPin,
@@ -31,7 +31,7 @@ export default function WhyChooseAslor() {
     <section id="why-us" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto">
       <div className="bg-[#163321] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
         {/* Header */}
-        <div className="max-w-2xl mb-10 space-y-3">
+        <div className="max-w-2xl mb-10 space-y-3 relative z-10">
           <span className="text-xs font-extrabold text-solvix-leafPillBg uppercase tracking-widest block">
             // TRUST & AUTHORITY
           </span>

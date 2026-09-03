@@ -60,7 +60,7 @@ export default function BenefitSection({ onSelectTrack }) {
               <div className="absolute inset-0 bg-gradient-to-t from-[#163321] via-transparent to-transparent opacity-80" />
               <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs">
                 <span className="font-semibold text-white flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-solvix-leafPillBg" /> 25-Year Warranty Guarantee
+                  <ShieldCheck className="w-4 h-4 text-solvix-leafPillBg" /> 27-Year Warranty Guarantee
                 </span>
                 <span className="text-[10px] text-neutral-300 font-bold bg-black/40 px-2 py-0.5 rounded-full border border-white/10">
                   Certified Partner
