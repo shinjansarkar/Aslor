@@ -92,27 +92,7 @@ export default function HeroSection({ onSelectTrack }) {
 
         {/* Right Column Photography & Big Brand Logo Showcase Card */}
         <div className="lg:col-span-5 space-y-4">
-          {/* Big Featured Logo Card */}
-          <div className="bg-white p-6 rounded-3xl border border-solvix-border shadow-md flex items-center gap-5 hover:border-solvix-leaf transition-all">
-            <div className="p-3 bg-solvix-bgDark rounded-2xl border border-solvix-border shrink-0">
-              <img
-                src="/logo.webp"
-                alt="Aslor Enterprises Big Logo"
-                className="w-24 sm:w-28 h-auto object-contain"
-              />
-            </div>
-            <div>
-              <span className="text-[10px] font-extrabold text-solvix-leafDark uppercase tracking-widest block mb-1">
-                // CERTIFIED PARTNER
-              </span>
-              <h3 className="text-xl font-extrabold text-solvix-forest tracking-tight leading-none mb-1">
-                ASLOR ENTERPRISES
-              </h3>
-              <p className="text-xs text-solvix-textMuted font-medium">
-                Premier Solar Energy Solutions in Siliguri & West Bengal
-              </p>
-            </div>
-          </div>
+
 
           {/* Main Visual Image Frame */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl border border-solvix-border bg-white group">

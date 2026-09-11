@@ -27,8 +27,15 @@ export default function Footer() {
               Delivering high-efficiency residential rooftop solar setups and turnkey commercial & industrial (C&I) EPC installations across Siliguri, Jalpaiguri, North Bengal, and West Bengal.
             </p>
 
-            <div className="inline-block text-[11px] font-medium text-amber-300 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
-              🏛️ PM Surya Ghar: Muft Bijli Yojana Partner
+            <div className="flex flex-wrap gap-2">
+              <div className="inline-block text-[11px] font-medium text-amber-300 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
+                🏛️ PM Surya Ghar: Muft Bijli Yojana Partner
+              </div>
+              <div className="inline-flex items-center gap-1.5 text-[11px] font-medium text-white bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                Official Certified Partner
+                <img src="/loom-logo.svg" alt="Loom Solar" className="h-3 ml-1" />
+              </div>
             </div>
           </div>
 
@@ -46,15 +53,11 @@ export default function Footer() {
 
           {/* West Bengal Service Coverage */}
           <div className="space-y-3">
-            <div className="text-xs font-bold text-white uppercase tracking-wider">Coverage Hubs</div>
-            <ul className="space-y-1.5 text-xs text-neutral-400">
-              <li className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-lime-400" /> Siliguri (HQ)</li>
-              <li className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-lime-400" /> Jalpaiguri & Duars</li>
-              <li className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-lime-400" /> Darjeeling & Hills</li>
-              <li className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-lime-400" /> Cooch Behar & Alipurduar</li>
-              <li className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-lime-400" /> Malda & North Bengal</li>
-              <li className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-lime-400" /> Kolkata & WB Districts</li>
-            </ul>
+            <div className="text-xs font-bold text-white uppercase tracking-wider">Office & Coverage</div>
+            <div className="text-xs text-neutral-400 leading-relaxed flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-lime-400 shrink-0 mt-0.5" />
+              <span>HQ matigara siliguri, and servicing all districts in North Bengal, 734010</span>
+            </div>
           </div>
 
           {/* Contact Details */}
@@ -71,7 +74,10 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-3.5 h-3.5 text-lime-400 shrink-0" />
-                <span>Certified Solar Partner</span>
+                <div className="flex items-center gap-1.5">
+                  <span>Certified Partner of</span>
+                  <img src="/loom-logo.svg" alt="Loom Solar" className="h-4 object-contain" />
+                </div>
               </div>
             </div>
           </div>

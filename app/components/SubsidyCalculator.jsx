@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Zap, IndianRupee, ArrowUpRight, ShieldCheck, Sparkles, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function SubsidyCalculator({ onApplyEstimate }) {
   const [monthlyBill, setMonthlyBill] = useState(3500);
@@ -44,13 +45,22 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
   };
 
   return (
-    <section id="calculator" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto">
-      <div className="bg-white rounded-3xl border border-solvix-border p-8 sm:p-12 shadow-xl relative overflow-hidden">
+    <section id="calculator" className="py-20 px-4 sm:px-8 max-w-[1400px] mx-auto overflow-hidden">
+      <div className="bg-white/40 backdrop-blur-3xl border border-white/60 rounded-[2.5rem] p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        {/* Ambient Subtle Glow */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-solvix-leafPillBg/50 rounded-full blur-3xl pointer-events-none" />
+
         {/* Top Header */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10 pb-8 border-b border-solvix-border">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, type: 'spring', bounce: 0.4 }}
+          className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10 pb-8 border-b border-white/40 relative z-10"
+        >
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E0ECCA] text-[#2E5718] text-xs font-bold uppercase tracking-wider mb-2">
-              <Zap className="w-3.5 h-3.5 fill-[#2E5718]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 text-solvix-leafDark border border-solvix-border text-xs font-bold uppercase tracking-wider mb-2 shadow-sm">
+              <Zap className="w-3.5 h-3.5 fill-solvix-leafDark" />
               <span>PM Surya Ghar Muft Bijli Yojana</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-solvix-forest tracking-tight">
@@ -61,7 +71,7 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
             </p>
           </div>
 
-          <div className="bg-solvix-bgDark p-4 rounded-2xl border border-solvix-border flex items-center gap-3">
+          <div className="bg-white/60 backdrop-blur-md p-4 rounded-2xl border border-solvix-border flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
             <ShieldCheck className="w-8 h-8 text-solvix-leafDark shrink-0" />
             <div>
               <span className="text-xs font-bold text-solvix-forest block">
@@ -72,19 +82,25 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Interactive Controls & Output Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
           {/* Left Controls */}
-          <div className="lg:col-span-6 space-y-8">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, type: 'spring', bounce: 0.4, delay: 0.2 }}
+            className="lg:col-span-6 space-y-8"
+          >
             {/* Slider 1: Monthly Bill */}
             <div className="space-y-3">
               <div className="flex justify-between items-center">
                 <label className="text-xs font-extrabold text-solvix-forest uppercase tracking-wider">
                   Average Monthly Electricity Bill
                 </label>
-                <span className="text-xl font-extrabold text-solvix-forest font-mono bg-solvix-bgDark px-3 py-1 rounded-xl border border-solvix-border">
+                <span className="text-xl font-extrabold text-solvix-forest font-mono bg-white/80 backdrop-blur-md px-3 py-1 rounded-xl border border-solvix-border shadow-sm">
                   ₹{monthlyBill.toLocaleString('en-IN')}
                 </span>
               </div>
@@ -95,7 +111,7 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
                 step="500"
                 value={monthlyBill}
                 onChange={(e) => setMonthlyBill(Number(e.target.value))}
-                className="w-full"
+                className="w-full accent-solvix-leaf"
               />
               <div className="flex justify-between text-[11px] font-semibold text-solvix-textMuted">
                 <span>₹1,000 / mo</span>
@@ -112,9 +128,9 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
                   <button
                     key={val}
                     onClick={() => setMonthlyBill(val)}
-                    className={`text-xs font-bold px-3 py-1.5 rounded-full border transition-all ${monthlyBill === val
-                        ? 'bg-solvix-forest text-white border-solvix-forest'
-                        : 'bg-solvix-bgDark text-solvix-forest border-solvix-border hover:border-solvix-leaf'
+                    className={`text-xs font-bold px-4 py-2 rounded-full border transition-all shadow-sm ${monthlyBill === val
+                        ? 'bg-solvix-forest text-white border-solvix-forest shadow-md'
+                        : 'bg-white/60 backdrop-blur-md text-solvix-forest border-solvix-border hover:border-solvix-leaf hover:bg-white'
                       }`}
                   >
                     ₹{val.toLocaleString('en-IN')}
@@ -124,7 +140,7 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
             </div>
 
             {/* Feature Checklist */}
-            <div className="space-y-2 pt-2 border-t border-solvix-border">
+            <div className="space-y-2 pt-4 border-t border-white/40">
               <div className="flex items-center gap-2 text-xs font-semibold text-solvix-forest">
                 <CheckCircle className="w-4 h-4 text-solvix-leafDark shrink-0" />
                 Includes WBSEDCL / CESC Bi-Directional Net Metering Approval
@@ -134,54 +150,62 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
                 27-Year Performance Warranty on Solar PV Modules
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Output Display Box (Solvix Deep Forest Green Card) */}
-          <div className="lg:col-span-6">
-            <div className="bg-[#163321] text-white p-8 rounded-3xl space-y-6 shadow-xl relative overflow-hidden">
-              <div className="flex items-center justify-between">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, type: 'spring', bounce: 0.4 }}
+            className="lg:col-span-6"
+          >
+            <div className="bg-solvix-forest text-white p-8 rounded-3xl space-y-6 shadow-xl relative overflow-hidden border border-white/10 hover:border-white/20 transition-all hover:shadow-2xl">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-2xl pointer-events-none" />
+              
+              <div className="flex items-center justify-between relative z-10">
                 <span className="text-xs font-bold text-solvix-leafPillBg uppercase tracking-widest">
                   ESTIMATED SYSTEM BREAKDOWN
                 </span>
-                <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-[#1F452E] text-white">
+                <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-white/10 text-white backdrop-blur-md border border-white/20 shadow-inner">
                   {recommendedKw} kW System
                 </span>
               </div>
 
               {/* Grid 2x2 Outputs */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                <div className="bg-[#1F452E] p-4 rounded-2xl border border-white/10">
-                  <span className="text-[11px] text-neutral-300 font-semibold block">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 relative z-10">
+                <div className="bg-white/5 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <span className="text-[11px] text-neutral-300 font-semibold block mb-1">
                     Govt Subsidy (Claimable)
                   </span>
-                  <span className="text-xl sm:text-2xl font-extrabold text-solvix-leafPillBg font-mono">
+                  <span className="text-xl sm:text-2xl font-extrabold text-solvix-leafPillBg font-mono drop-shadow-md">
                     ₹{subsidy.toLocaleString('en-IN')}
                   </span>
                 </div>
 
-                <div className="bg-[#1F452E] p-4 rounded-2xl border border-white/10">
-                  <span className="text-[11px] text-neutral-300 font-semibold block">
+                <div className="bg-white/5 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <span className="text-[11px] text-neutral-300 font-semibold block mb-1">
                     Est. Monthly Savings
                   </span>
-                  <span className="text-xl sm:text-2xl font-extrabold text-white font-mono">
+                  <span className="text-xl sm:text-2xl font-extrabold text-white font-mono drop-shadow-md">
                     ₹{monthlySavings.toLocaleString('en-IN')}
                   </span>
                 </div>
 
-                <div className="bg-[#1F452E] p-4 rounded-2xl border border-white/10">
-                  <span className="text-[11px] text-neutral-300 font-semibold block">
+                <div className="bg-white/5 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <span className="text-[11px] text-neutral-300 font-semibold block mb-1">
                     Net Investment (Post-Subsidy)
                   </span>
-                  <span className="text-lg sm:text-xl font-extrabold text-white font-mono">
+                  <span className="text-lg sm:text-xl font-extrabold text-white font-mono drop-shadow-md">
                     ₹{netInvestment.toLocaleString('en-IN')}
                   </span>
                 </div>
 
-                <div className="bg-[#1F452E] p-4 rounded-2xl border border-white/10">
-                  <span className="text-[11px] text-neutral-300 font-semibold block">
+                <div className="bg-white/5 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <span className="text-[11px] text-neutral-300 font-semibold block mb-1">
                     Estimated Payback
                   </span>
-                  <span className="text-lg sm:text-xl font-extrabold text-solvix-leafPillBg font-mono">
+                  <span className="text-lg sm:text-xl font-extrabold text-solvix-leafPillBg font-mono drop-shadow-md">
                     {paybackYears} Years
                   </span>
                 </div>
@@ -190,13 +214,13 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
               {/* Action Button */}
               <button
                 onClick={handleApply}
-                className="w-full py-3.5 px-6 rounded-full bg-solvix-leafPillBg text-[#2E5718] font-extrabold text-sm flex items-center justify-center gap-2 hover:bg-white transition-all shadow-md"
+                className="w-full py-4 px-6 rounded-full bg-solvix-leaf text-white font-extrabold text-sm flex items-center justify-center gap-2 hover:bg-solvix-leafDark hover:scale-[1.02] transition-all shadow-lg relative z-10"
               >
                 <span>Apply Estimate To Consultation Form</span>
                 <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

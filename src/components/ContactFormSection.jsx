@@ -107,7 +107,7 @@ export default function ContactFormSection({ prefillData, selectedTrack }) {
                   </div>
                   <div>
                     <div className="text-xs font-semibold text-white">Regional Office Hub</div>
-                    <div className="text-xs text-neutral-400">Siliguri, Jalpaiguri & North Bengal, West Bengal, India</div>
+                    <div className="text-xs text-neutral-400">HQ matigara siliguri, and servicing all districts in North Bengal, 734010</div>
                   </div>
                 </div>
 
@@ -128,6 +128,18 @@ export default function ContactFormSection({ prefillData, selectedTrack }) {
                   <div>
                     <div className="text-xs font-semibold text-white">Email Address</div>
                     <div className="text-xs text-neutral-400">contact@aslorenterprises.com</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 pt-3">
+                <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shrink-0">
+                  <ShieldCheck className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold text-white">Official Certified Partner</div>
+                  <div className="text-xs text-neutral-400 mt-1">
+                    <img src="/loom-logo.svg" alt="Loom Solar" className="h-5" />
                   </div>
                 </div>
               </div>

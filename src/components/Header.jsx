@@ -46,7 +46,7 @@ export default function Header({ onSelectTrack }) {
               </span>
             </div>
             <p className="text-[10px] text-neutral-400 flex items-center gap-1 font-medium">
-              <ShieldCheck className="w-3 h-3 text-lime-400 inline" /> Certified Solar Partner
+              <ShieldCheck className="w-3 h-3 text-emerald-400 inline" /> Certified Partner of <img src="/loom-logo.svg" alt="Loom Solar" className="h-3 ml-0.5 object-contain" />
             </p>
           </div>
         </a>

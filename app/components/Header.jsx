@@ -1,10 +1,21 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Menu, X, ArrowUpRight, ShieldCheck, Zap, PhoneCall, Home, Building2, Layers, Award, HardHat } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X, ArrowUpRight, ShieldCheck, Zap } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header({ onSelectTrack }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollTo = (id, trackChoice = null) => {
     setMobileMenuOpen(false);
@@ -19,155 +30,133 @@ export default function Header({ onSelectTrack }) {
     }
   };
 
-  return (
-    <header className="sticky top-0 z-50 transition-all pt-3 px-4 sm:px-8">
-      {/* Top Subtle Announcement Bar */}
-      <div className="max-w-7xl mx-auto mb-2 hidden sm:flex items-center justify-between text-xs text-solvix-textMuted px-5 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-solvix-border shadow-sm">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-solvix-leaf animate-pulse" />
-          <span className="font-medium text-solvix-textDark">
-            Premier Solar EPC & Rooftop Solutions
-          </span>
-          <span className="text-solvix-border">•</span>
-          <span className="text-solvix-leafDark font-semibold">PM Surya Ghar Direct Govt Subsidies</span>
-        </div>
-        <div className="flex items-center gap-4 text-[11px]">
-          <span>Siliguri & West Bengal</span>
-          <span className="text-solvix-border">•</span>
-          <a href="tel:+919800000000" className="hover:text-solvix-leafDark font-medium transition-colors flex items-center gap-1">
-            <PhoneCall className="w-3 h-3 text-solvix-leaf" /> +91 Helpline
-          </a>
-        </div>
-      </div>
+  const navLinks = [
+    { name: 'Home', id: 'hero' },
+    { name: 'Residential', id: 'residential', track: 'Residential Rooftop (Home)' },
+    { name: 'Commercial', id: 'commercial', track: 'Commercial or Industrial Project' },
+    { name: 'Why Us', id: 'why-us' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Process', id: 'process' },
+    { name: 'Calculator', id: 'calculator', icon: <Zap className="w-4 h-4 text-solvix-leaf fill-solvix-leaf" /> },
+  ];
 
-      {/* Main Solvix Floating Glass Header */}
-      <div className="max-w-7xl mx-auto px-5 py-3 rounded-full bg-white/90 backdrop-blur-xl border border-solvix-border flex items-center justify-between shadow-md">
+  return (
+    <motion.header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex justify-center ${isScrolled ? 'pt-4 px-4' : 'pt-6 px-6 sm:px-10'}`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+    >
+      <motion.div 
+        layout
+        className={`flex items-center justify-between transition-all duration-500 ${
+          isScrolled 
+            ? 'w-full max-w-5xl bg-white/75 backdrop-blur-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white/60 rounded-[2rem] px-4 py-2.5' 
+            : 'w-full max-w-[1400px] bg-transparent border-transparent px-2 py-2 rounded-[2rem]'
+        }`}
+      >
         {/* Brand Logo */}
-        <a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo('hero'); }} className="flex items-center gap-3 group">
-          <div className="p-1 rounded-xl bg-solvix-bgDark border border-solvix-border group-hover:border-solvix-leaf transition-all shrink-0">
-            <img src="/logo.webp" alt="Aslor Enterprises Logo" className="h-10 sm:h-11 w-auto object-contain" />
-          </div>
-          <div>
-            <div className="flex items-center gap-1.5">
-              <span className="font-extrabold text-base tracking-tight text-solvix-forest group-hover:text-solvix-leaf transition-colors">
-                ASLOR
-              </span>
-              <span className="text-[9px] font-bold text-solvix-leafDark px-1.5 py-0.5 rounded bg-solvix-leafPillBg border border-solvix-leafPillBg">
-                ENTERPRISES
-              </span>
-            </div>
-            <p className="text-[10px] text-solvix-textMuted font-medium flex items-center gap-1">
-              <ShieldCheck className="w-3 h-3 text-solvix-leaf inline" /> Certified Solar Partner
-            </p>
-          </div>
+        <a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo('hero'); }} className="flex items-center gap-3 group shrink-0 relative z-10">
+          <motion.img layout src="/logo.webp" alt="Aslor Logo" className="h-10 sm:h-12 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform" />
+          <motion.div layout className={`hidden sm:block ${isScrolled ? 'lg:block hidden' : ''}`}>
+             <div className="flex items-center gap-2">
+                <span className="font-extrabold text-xl tracking-tighter text-solvix-forest group-hover:text-solvix-leaf transition-colors">
+                  ASLOR
+                </span>
+                {!isScrolled && (
+                  <span className="text-[10px] font-bold text-solvix-forest px-2 py-0.5 rounded-full bg-white/60 backdrop-blur-sm border border-solvix-border/50">
+                    ENTERPRISES
+                  </span>
+                )}
+             </div>
+             {!isScrolled && (
+               <p className="text-xs text-solvix-forest/80 font-bold flex items-center gap-1.5 mt-0.5 whitespace-nowrap">
+                  <ShieldCheck className="w-3.5 h-3.5 text-solvix-leaf inline" /> Certified Solar Partner
+               </p>
+             )}
+          </motion.div>
         </a>
 
-        {/* Center Pill Links */}
-        <nav className="hidden xl:flex items-center gap-6 text-xs font-semibold text-solvix-textDark bg-solvix-bgDark px-6 py-2 rounded-full border border-solvix-border">
-          <button onClick={() => scrollTo('hero')} className="hover:text-solvix-leaf transition-colors cursor-pointer">
-            Home
-          </button>
-          <button
-            onClick={() => scrollTo('residential', 'Residential Rooftop (Home)')}
-            className="hover:text-solvix-leaf transition-colors cursor-pointer"
-          >
-            Residential
-          </button>
-          <button
-            onClick={() => scrollTo('commercial', 'Commercial or Industrial Project')}
-            className="hover:text-solvix-leaf transition-colors cursor-pointer"
-          >
-            Commercial EPC
-          </button>
-          <button onClick={() => scrollTo('why-us')} className="hover:text-solvix-leaf transition-colors cursor-pointer">
-            Why Us
-          </button>
-          <button onClick={() => scrollTo('projects')} className="hover:text-solvix-leaf transition-colors cursor-pointer">
-            Projects
-          </button>
-          <button onClick={() => scrollTo('process')} className="hover:text-solvix-leaf transition-colors cursor-pointer">
-            Process
-          </button>
-          <button onClick={() => scrollTo('calculator')} className="hover:text-solvix-leaf transition-colors cursor-pointer flex items-center gap-1 font-bold text-solvix-leafDark">
-            <Zap className="w-3 h-3 text-solvix-leaf fill-solvix-leaf" /> Calculator
-          </button>
-        </nav>
+        {/* Clean Navigation Links with Magnetic Hover */}
+        <motion.nav layout className="hidden xl:flex items-center gap-1 relative z-10">
+          {navLinks.map((link, idx) => (
+            <button
+              key={link.name}
+              onMouseEnter={() => setHoveredIndex(idx)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              onClick={() => scrollTo(link.id, link.track)}
+              className={`relative px-4 py-2 text-[13.5px] font-bold transition-colors duration-300 ${
+                hoveredIndex === idx ? 'text-solvix-leafDark' : 'text-solvix-forest'
+              }`}
+            >
+              {hoveredIndex === idx && (
+                <motion.div
+                  layoutId="hover-pill"
+                  className="absolute inset-0 bg-white/90 backdrop-blur-md shadow-sm border border-black/5 rounded-full -z-10"
+                  transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                />
+              )}
+              <span className="relative z-10 flex items-center gap-1.5">
+                {link.icon && link.icon}
+                {link.name}
+              </span>
+            </button>
+          ))}
+        </motion.nav>
 
-        {/* Right CTA Button */}
-        <div className="hidden md:flex items-center gap-3">
-          <button onClick={() => scrollTo('contact')} className="btn-solvix-primary text-xs">
+        {/* Right CTA Button & Mobile Menu */}
+        <motion.div layout className="flex items-center gap-3 shrink-0 relative z-10">
+          <button onClick={() => scrollTo('contact')} className={`hidden md:flex transition-all duration-300 ${isScrolled ? 'btn-solvix-primary text-xs py-2 px-4 shadow-sm' : 'btn-solvix-primary text-sm py-2.5 px-6 shadow-md'}`}>
             <span>Contact Us</span>
             <div className="icon-badge">
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <ArrowUpRight className={isScrolled ? "w-3.5 h-3.5" : "w-4 h-4"} />
             </div>
           </button>
-        </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="xl:hidden p-2 rounded-full text-solvix-forest bg-solvix-bgDark border border-solvix-border"
-        >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
-      </div>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="xl:hidden p-2.5 rounded-full text-solvix-forest bg-white/70 backdrop-blur-md shadow-sm border border-solvix-border/50 hover:bg-white transition-colors"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </motion.div>
+      </motion.div>
 
       {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-        <div className="xl:hidden mt-2 max-w-7xl mx-auto bg-white border border-solvix-border rounded-3xl p-6 space-y-3 shadow-xl">
-          <button
-            onClick={() => scrollTo('hero')}
-            className="block w-full text-left text-sm font-semibold text-solvix-textDark hover:text-solvix-leaf py-2 border-b border-solvix-border"
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+            className="absolute top-[110%] left-4 right-4 xl:hidden max-w-7xl mx-auto bg-white/95 backdrop-blur-2xl border border-white/60 rounded-[2rem] p-6 space-y-2 shadow-2xl origin-top"
           >
-            Home
-          </button>
-          <button
-            onClick={() => scrollTo('residential', 'Residential Rooftop (Home)')}
-            className="block w-full text-left text-sm font-semibold text-solvix-textDark hover:text-solvix-leaf py-2 border-b border-solvix-border"
-          >
-            Residential Solar & Subsidies
-          </button>
-          <button
-            onClick={() => scrollTo('commercial', 'Commercial or Industrial Project')}
-            className="block w-full text-left text-sm font-semibold text-solvix-textDark hover:text-solvix-leaf py-2 border-b border-solvix-border"
-          >
-            Commercial & Industrial EPC
-          </button>
-          <button
-            onClick={() => scrollTo('why-us')}
-            className="block w-full text-left text-sm font-semibold text-solvix-textDark hover:text-solvix-leaf py-2 border-b border-solvix-border"
-          >
-            Why Choose Aslor
-          </button>
-          <button
-            onClick={() => scrollTo('projects')}
-            className="block w-full text-left text-sm font-semibold text-solvix-textDark hover:text-solvix-leaf py-2 border-b border-solvix-border"
-          >
-            Our Solar Projects
-          </button>
-          <button
-            onClick={() => scrollTo('process')}
-            className="block w-full text-left text-sm font-semibold text-solvix-textDark hover:text-solvix-leaf py-2 border-b border-solvix-border"
-          >
-            Installation Process
-          </button>
-          <button
-            onClick={() => scrollTo('calculator')}
-            className="block w-full text-left text-sm font-bold text-solvix-leafDark py-2 border-b border-solvix-border"
-          >
-            PM Surya Ghar Calculator
-          </button>
-          <button
-            onClick={() => scrollTo('contact')}
-            className="btn-solvix-primary w-full justify-between text-xs mt-2"
-          >
-            <span>Request Consultation</span>
-            <div className="icon-badge">
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </div>
-          </button>
-        </div>
-      )}
-    </header>
+            {navLinks.map((link) => (
+              <button
+                key={link.name}
+                onClick={() => scrollTo(link.id, link.track)}
+                className="block w-full text-left text-sm font-bold text-solvix-forest hover:text-solvix-leaf py-3.5 border-b border-black/5 flex items-center justify-between group"
+              >
+                <span className="flex items-center gap-3">
+                  {link.icon && link.icon}
+                  {link.name}
+                </span>
+                <ArrowUpRight className="w-4 h-4 opacity-30 group-hover:opacity-100 transition-opacity" />
+              </button>
+            ))}
+            <button
+              onClick={() => scrollTo('contact')}
+              className="btn-solvix-primary w-full justify-between text-sm py-4 mt-4 shadow-md"
+            >
+              <span>Request Consultation</span>
+              <div className="icon-badge">
+                <ArrowUpRight className="w-4 h-4" />
+              </div>
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 }

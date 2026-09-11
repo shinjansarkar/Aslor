@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
+import ShaderShowcase from './components/ui/hero';
 import TrustTicker from './components/TrustTicker';
 import ResidentialSection from './components/ResidentialSection';
 import CommercialSection from './components/CommercialSection';
@@ -35,8 +35,8 @@ export default function Home() {
 
       {/* Main Flow */}
       <main className="flex-grow space-y-4">
-        {/* 1. Homepage Hero Section with Dual CTAs */}
-        <HeroSection onSelectTrack={handleSelectTrack} />
+        {/* 1. Homepage Premium Shader Hero Section with Dual CTAs */}
+        <ShaderShowcase onSelectTrack={handleSelectTrack} />
 
         {/* 2. Trust Badges & Partner Ticker */}
         <TrustTicker />
