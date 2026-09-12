@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ShieldCheck, ArrowUpRight, Sun, Phone, Mail, MapPin } from 'lucide-react';
+import { ShieldCheck, ArrowUpRight, Sun, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
@@ -109,6 +109,12 @@ export default function Footer() {
                 Helpline: +91 98000 00000
               </p>
               <p className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-solvix-leafPillBg shrink-0" />
+                <a href="mailto:aslorenterprises@gmail.com" className="hover:text-white transition-colors">
+                  aslorenterprises@gmail.com
+                </a>
+              </p>
+              <p className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-solvix-leafPillBg shrink-0" />
                 Approved by MNRE, WBSEDCL, & CESC
               </p>
@@ -139,6 +145,14 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 mr-2">
+              <a href="https://www.facebook.com/share/1C84CnG4cx/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-solvix-leafPillBg hover:text-[#163321] transition-all" aria-label="Facebook">
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a href="https://www.instagram.com/aslorenterprises?stkn=MTFwcDV5NzFvYXdkdQ%3D%3D" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-solvix-leafPillBg hover:text-[#163321] transition-all" aria-label="Instagram">
+                <Instagram className="w-4 h-4" />
+              </a>
+            </div>
             <a href="#hero" className="hover:text-white transition-colors">
               Privacy Policy
             </a>

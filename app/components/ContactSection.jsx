@@ -31,12 +31,36 @@ export default function ContactSection({ selectedTrack, prefillData }) {
     }
   }, [prefillData]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 6000);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({
+            fullName: '',
+            phone: '',
+            lookingFor: selectedTrack || 'Residential Rooftop (Home)',
+            location: '',
+            powerLoad: '',
+          });
+        }, 6000);
+      } else {
+        alert('There was an issue submitting your request. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an issue submitting your request. Please try again.');
+    }
   };
 
   return (
@@ -97,6 +121,18 @@ export default function ContactSection({ selectedTrack, prefillData }) {
                   <span className="text-xs font-bold text-solvix-forest block">Phone & WhatsApp Helpline</span>
                   <a href="tel:+919800000000" className="text-xs text-solvix-leafDark font-bold hover:underline">
                     +91 Direct Support Line
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/60 backdrop-blur-md border border-solvix-border text-solvix-forest flex items-center justify-center font-bold shadow-sm">
+                  <Mail className="w-5 h-5 text-solvix-leafDark" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-solvix-forest block">Email Address</span>
+                  <a href="mailto:aslorenterprises@gmail.com" className="text-xs text-solvix-leafDark font-bold hover:underline">
+                    aslorenterprises@gmail.com
                   </a>
                 </div>
               </div>
