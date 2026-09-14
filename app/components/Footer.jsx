@@ -106,7 +106,7 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-solvix-leafPillBg shrink-0" />
-                Helpline: +91 98000 00000
+                Helpline: +91 74782 23405
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-solvix-leafPillBg shrink-0" />

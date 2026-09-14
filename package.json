@@ -11,11 +11,14 @@
     "@paper-design/shaders-react": "^0.0.80",
     "canvas-confetti": "^1.9.4",
     "framer-motion": "^13.1.1",
+    "images-scraper": "^7.0.0",
     "lucide-react": "^0.344.0",
     "next": "^14.2.15",
     "nodemailer": "^10.0.8",
+    "puppeteer": "^25.11.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "sharp": "^0.35.4",
     "tailwindcss": "^3.4.19"
   },
   "devDependencies": {

@@ -27,7 +27,7 @@ export default function TrustTicker() {
                 <Award className="w-4 h-4 text-solvix-leaf" /> Certified Excellence
               </span>
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tighter text-solvix-forest">
-                Official Strategic Partner
+                Official Partner
               </h3>
               <p className="text-sm text-solvix-textMuted font-medium max-w-md mx-auto md:mx-0 leading-relaxed">
                 Empowering India's green transition with industry-leading solar technology, robust manufacturing, and uncompromising quality standards.

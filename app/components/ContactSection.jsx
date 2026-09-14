@@ -119,8 +119,8 @@ export default function ContactSection({ selectedTrack, prefillData }) {
                 </div>
                 <div>
                   <span className="text-xs font-bold text-solvix-forest block">Phone & WhatsApp Helpline</span>
-                  <a href="tel:+919800000000" className="text-xs text-solvix-leafDark font-bold hover:underline">
-                    +91 Direct Support Line
+                  <a href="tel:+917478223405" className="text-xs text-solvix-leafDark font-bold hover:underline">
+                    +91 74782 23405
                   </a>
                 </div>
               </div>

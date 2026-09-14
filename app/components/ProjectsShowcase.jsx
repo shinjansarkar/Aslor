@@ -1,216 +1,218 @@
 'use client';
 
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, MapPin, Zap, ArrowUpRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { MapPin, Zap, Activity, Cpu, ShieldCheck } from 'lucide-react';
 
-export default function ProjectsShowcase({ onSelectTrack }) {
-  const [activeIdx, setActiveIdx] = useState(0);
-
-  const projects = [
-    {
-      num: '01',
-      title: 'Sustainable Living For A Community',
-      location: 'Oscar Haven Residences — Kolkata',
-      capacity: '75 kW On-Grid Rooftop Array',
-      savings: '₹68,000 / month saved',
-      image: '/solar-hero.png',
-      tags: ['Residential Rooftop', 'Solar Energy', 'Energy Saving'],
-      desc: 'Turnkey residential rooftop solar plant powering 32 luxury villas in Kolkata. Integrated with WBSEDCL net-metering & 4-hour battery backup system.',
-    },
-    {
-      num: '02',
-      title: 'Solar-Powered Commercial Retail',
-      location: 'BellaMart Superstore — Siliguri',
-      capacity: '120 kW Industrial Solar Plant',
-      savings: '₹1,15,000 / month saved',
-      image: '/aslor-commercial-farm.webp',
-      tags: ['Commercial EPC', 'Net Metering', 'High Efficiency'],
-      desc: 'High-yield rooftop solar installation reducing operational overhead for Siliguri’s premier retail center by 75% year-round.',
-    },
-    {
-      num: '03',
-      title: 'Off-Grid Eco Solar Farm',
-      location: 'Harmony Eco Lodge — Durgapur',
-      capacity: '50 kW Hybrid Microgrid',
-      savings: 'Zero Grid Dependency',
-      image: '/solar-benefit.png',
-      tags: ['Off-Grid Solar', 'Lithium Storage', 'Zero Carbon'],
-      desc: 'Autonomous solar microgrid with high-density lithium energy storage, delivering 24/7 reliable power off the main grid.',
-    },
-    {
-      num: '04',
-      title: 'Smart Solar For Urban Infrastructure',
-      location: 'City Transit Hub — Howrah',
-      capacity: '200 kW Commercial Rooftop',
-      savings: '₹1,80,000 / month saved',
-      image: '/aslor-rooftop-team.webp',
-      tags: ['Urban Infrastructure', 'Turnkey EPC', 'Solar Power'],
-      desc: 'Heavy-duty commercial solar EPC engineered for high structural wind loads and maximum solar harvest in urban environments.',
-    },
+export default function ProjectsShowcase() {
+  const installations = [
+    { capacity: '1.1 MW', location: 'Haridwar, Uttarakhand' },
+    { capacity: '2.4 MW', location: 'Madhya Pradesh' },
+    { capacity: '3.5 MW', location: 'Jodhpur, Rajasthan' },
+    { capacity: '3.25 MW', location: 'Erode, Tamil Nadu' },
+    { capacity: '5.0 MW', location: 'Bhadla, Rajasthan' },
+    { capacity: '2.0 MW', location: 'Pune, Maharashtra' },
+    { capacity: '1.5 MW', location: 'Surat, Gujarat' },
+    { capacity: '4.2 MW', location: 'Kurnool, Andhra Pradesh' },
   ];
 
-  const currentProject = projects[activeIdx];
+  const technologies = [
+    { tech: 'Mono PERC', eff: 'Medium-High', cost: 'Moderate', app: 'Residential', icon: <Activity size={20} /> },
+    { tech: 'TOPCon', eff: 'High', cost: 'Premium', app: 'Residential & Commercial', icon: <Zap size={20} /> },
+    { tech: 'HJT', eff: 'Very High', cost: 'Premium', app: 'Premium Projects', icon: <Cpu size={20} /> },
+    { tech: 'Bifacial', eff: 'High', cost: 'Moderate-Premium', app: 'Ground & Elevated', icon: <ShieldCheck size={20} /> },
+    { tech: 'G12R', eff: 'High Power Output', cost: 'Moderate', app: 'Rooftop Optimization', icon: <Zap size={20} /> },
+    { tech: 'LBC', eff: 'High', cost: 'Premium', app: 'Premium Rooftop', icon: <ShieldCheck size={20} /> },
+  ];
 
   return (
     <section id="projects" className="py-20 px-4 sm:px-8 max-w-[1400px] mx-auto overflow-hidden">
-      <div className="bg-white/40 backdrop-blur-3xl border border-white/60 rounded-[2.5rem] p-8 sm:p-16 shadow-2xl relative overflow-hidden">
+      <div className="bg-white/40 backdrop-blur-3xl border border-white/60 rounded-[2.5rem] p-8 sm:p-16 shadow-2xl relative overflow-hidden space-y-24">
         {/* Ambient Subtle Glow */}
         <div className="absolute top-10 left-10 w-96 h-96 bg-solvix-leafPillBg/50 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-solvix-leaf/10 rounded-full blur-3xl pointer-events-none" />
 
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, type: 'spring', bounce: 0.4 }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 relative z-10"
-        >
-          <div>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 text-solvix-forest text-xs font-bold uppercase tracking-widest border border-solvix-border shadow-sm mb-4">
-              // OUR PROJECTS
-            </span>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-solvix-forest tracking-tighter">
-              See The Power Of Solar In Action
-            </h2>
-          </div>
-          <p className="text-base sm:text-lg text-solvix-textMuted max-w-md font-medium leading-relaxed">
-            Explore our active solar installations, high-yield commercial projects, and eco-friendly microgrids engineered across West Bengal.
-          </p>
-        </motion.div>
-
-        {/* Main Solvix Project Accordion Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start relative z-10">
-          {/* Left Column Expandable Accordion List */}
+        {/* Official Partners Section (State Agencies & PSUs) */}
+        <div className="relative z-10 pb-16 border-b border-solvix-border/50">
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, type: 'spring', bounce: 0.4, delay: 0.2 }}
-            className="lg:col-span-6 space-y-4"
+            transition={{ duration: 0.7, type: 'spring', bounce: 0.4 }}
+            className="text-center mb-12 flex flex-col items-center"
           >
-            {projects.map((proj, idx) => {
-              const isOpen = activeIdx === idx;
-              return (
-                <div
-                  key={idx}
-                  onClick={() => setActiveIdx(idx)}
-                  className={`cursor-pointer rounded-3xl border transition-all p-6 shadow-sm hover:shadow-xl ${
-                    isOpen
-                      ? 'bg-white border-solvix-leaf shadow-md scale-[1.02]'
-                      : 'bg-white/60 backdrop-blur-md border-solvix-border hover:bg-white hover:border-solvix-leaf'
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-5">
-                      <span className="text-sm font-extrabold text-solvix-leafDark font-mono bg-solvix-bg px-3 py-1 rounded-lg border border-solvix-border">
-                        {proj.num}
-                      </span>
-                      <h3 className="text-base sm:text-lg font-extrabold text-solvix-forest tracking-tight">
-                        {proj.title}
-                      </h3>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="hidden sm:inline text-xs font-medium text-solvix-textMuted">
-                        {proj.location.split('—')[1]}
-                      </span>
-                      {isOpen ? (
-                        <ChevronUp className="w-5 h-5 text-solvix-leafDark shrink-0" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-solvix-textMuted shrink-0" />
-                      )}
-                    </div>
-                  </div>
-
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div 
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="mt-5 pt-5 border-t border-solvix-border space-y-4 overflow-hidden"
-                      >
-                        <p className="text-sm text-solvix-textMuted leading-relaxed font-medium">
-                          {proj.desc}
-                        </p>
-                        <div className="flex flex-wrap items-center gap-2 pt-1">
-                          {proj.tags.map((tag, tIdx) => (
-                            <span
-                              key={tIdx}
-                              className="text-xs font-bold text-[#2E5718] px-3 py-1.5 rounded-full bg-solvix-leafPillBg"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              );
-            })}
-          </motion.div>
-
-          {/* Right Column Dynamic Project Showcase Card */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, type: 'spring', bounce: 0.4 }}
-            className="lg:col-span-6"
-          >
-            <div className="bg-white/80 backdrop-blur-xl p-5 rounded-[2.5rem] border border-solvix-border shadow-xl space-y-4">
-              <AnimatePresence mode="wait">
-                <motion.div 
-                  key={activeIdx}
-                  initial={{ opacity: 0, filter: 'blur(10px)' }}
-                  animate={{ opacity: 1, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, filter: 'blur(10px)' }}
-                  transition={{ duration: 0.4 }}
-                  className="relative rounded-[2rem] overflow-hidden h-[300px] sm:h-[400px] group"
-                >
-                  <img
-                    src={currentProject.image}
-                    alt={currentProject.title}
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-solvix-forest/90 via-solvix-forest/20 to-transparent opacity-90" />
-
-                  <div className="absolute top-5 left-5 flex items-center gap-2 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-xs font-bold text-solvix-forest shadow-sm">
-                    <MapPin className="w-4 h-4 text-solvix-leaf" />
-                    {currentProject.location}
-                  </div>
-
-                  <div className="absolute bottom-5 left-5 right-5 text-white flex items-center justify-between">
-                    <div>
-                      <span className="text-xs text-solvix-leafPillBg font-bold uppercase block mb-1">
-                        {currentProject.capacity}
-                      </span>
-                      <span className="text-lg sm:text-xl font-extrabold text-white">
-                        {currentProject.savings}
-                      </span>
-                    </div>
-                    <button
-                      onClick={() => onSelectTrack && onSelectTrack(currentProject.tags[0])}
-                      className="w-12 h-12 rounded-full bg-solvix-leaf text-white flex items-center justify-center hover:bg-solvix-forest transition-colors shadow-lg hover:scale-110"
-                    >
-                      <ArrowUpRight className="w-5 h-5" />
-                    </button>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-
-              <div className="p-3 flex items-center justify-between text-sm font-semibold text-solvix-textDark">
-                <span className="flex items-center gap-2 text-solvix-forest">
-                  <Zap className="w-5 h-5 text-solvix-leaf fill-solvix-leaf" /> System Specs: Certified Solar EPC
-                </span>
-                <span className="text-solvix-textMuted bg-solvix-bg px-3 py-1 rounded-full border border-solvix-border">
-                  Project 0{activeIdx + 1} of 04
-                </span>
-              </div>
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 border border-solvix-border shadow-sm text-solvix-forest text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-solvix-leaf opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-solvix-leaf"></span>
+              </span>
+              Approved by State Agencies & PSUs
             </div>
+            
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-solvix-forest tracking-tighter pb-2">
+              Our Official Partners
+            </h2>
+            <p className="mt-4 max-w-2xl text-solvix-textMuted font-medium text-base md:text-lg leading-relaxed">
+              We are proud to be trusted and approved by premier government agencies and public sector undertakings across India.
+            </p>
           </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            {[
+              { img: 'pwd_haryana.webp', name: 'Haryana PWD' },
+              { img: 'nbcc.webp', name: 'National Building Construction Corporation' },
+              { img: 'sail.webp', name: 'Steel Authority of India Limited' },
+              { img: 'jreda.webp', name: 'Jharkhand Renewable Energy Dev. Agency' },
+              { img: 'npcil.webp', name: 'Nuclear Power Corporation of India' },
+              { img: 'ser.webp', name: 'South Eastern Railway' },
+              { img: 'upneda.webp', name: 'Uttar Pradesh NEDA' },
+              { img: 'nmdc.webp', name: 'National Mineral Development Corp.' },
+              { img: 'nitra.webp', name: 'Northern India Textile Research Assoc.' },
+              { img: 'mod.webp', name: 'Department of Defence' },
+              { img: 'bccl.webp', name: 'Bharat Coking Coal Limited' },
+              { img: 'mahapwd.webp', name: 'Maharashtra PWD' },
+            ].map((agency, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
+                className="bg-white/70 backdrop-blur-md border border-solvix-border rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md transition-shadow group"
+              >
+                <div className="w-16 h-16 mb-4 group-hover:scale-110 transition-transform">
+                  <img src={`/partners/${agency.img}`} alt={agency.name} className="w-full h-full object-contain drop-shadow-sm" />
+                </div>
+                <h4 className="text-xs font-bold text-solvix-forest leading-snug">
+                  {agency.name}
+                </h4>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Installations Section (No Photos, Clean Premium UI) */}
+        <div className="relative z-10 pt-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, type: 'spring', bounce: 0.4 }}
+            className="text-center mb-16 flex flex-col items-center relative"
+          >
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-2xl h-32 bg-solvix-leaf/20 blur-[80px] rounded-full -z-10" />
+
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 border border-solvix-border shadow-sm text-solvix-forest text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-solvix-leaf opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-solvix-leaf"></span>
+              </span>
+              // OUR OFFICIAL PARTNERS PROJECTS
+            </div>
+            
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-solvix-forest tracking-tighter pb-2">
+              Installations
+            </h2>
+            
+            <p className="mt-4 max-w-2xl text-solvix-textMuted font-medium text-base md:text-lg leading-relaxed">
+              Our proven track record spans across multiple states, delivering massive solar capacities engineered for maximum efficiency.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {installations.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="group relative bg-white/60 backdrop-blur-md border border-white/80 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300"
+              >
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-solvix-leaf/20 to-transparent rounded-bl-full rounded-tr-3xl opacity-50 group-hover:opacity-100 transition-opacity" />
+                
+                <div className="w-12 h-12 rounded-2xl bg-solvix-leafPillBg text-solvix-leafDark flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                  <MapPin size={24} strokeWidth={2.5} />
+                </div>
+                
+                <h3 className="text-3xl font-black text-solvix-forest mb-2">
+                  {item.capacity}
+                </h3>
+                
+                <div className="flex items-start gap-2 text-solvix-textMuted font-medium group-hover:text-solvix-textDark transition-colors">
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-solvix-leaf shrink-0" />
+                  {item.location}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Technology Section (Modern Bento/Card Layout) */}
+        <div className="relative z-10 pt-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, type: 'spring', bounce: 0.4 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-solvix-forest tracking-tighter pb-2">
+              Advanced Technology
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-solvix-textMuted font-medium text-base md:text-lg leading-relaxed">
+              We leverage the industry's most cutting-edge solar technologies to ensure optimal performance, durability, and ROI for every segment.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {technologies.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-white/80 backdrop-blur-xl rounded-3xl p-7 border border-solvix-border shadow-md hover:shadow-2xl hover:border-solvix-leaf/50 transition-all duration-300 relative overflow-hidden group"
+              >
+                {/* Background decorative blob */}
+                <div className="absolute -right-10 -top-10 w-32 h-32 bg-solvix-leaf/10 rounded-full blur-3xl group-hover:bg-solvix-leaf/20 transition-colors duration-500" />
+                
+                <div className="flex items-center gap-4 mb-6 relative z-10">
+                  <div className="w-12 h-12 rounded-xl bg-solvix-forest text-white flex items-center justify-center shadow-md group-hover:bg-solvix-leaf transition-colors duration-300">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-2xl font-extrabold text-solvix-forest">{item.tech}</h3>
+                </div>
+
+                <div className="space-y-4 relative z-10">
+                  <div className="flex justify-between items-center bg-solvix-bg/50 p-3 rounded-2xl border border-white">
+                    <span className="text-xs font-bold text-solvix-textMuted uppercase tracking-widest">Efficiency</span>
+                    <span className="text-sm font-extrabold text-solvix-leafDark bg-solvix-leafPillBg px-3 py-1 rounded-lg">
+                      {item.eff}
+                    </span>
+                  </div>
+                  
+                  <div className="flex justify-between items-center bg-solvix-bg/50 p-3 rounded-2xl border border-white">
+                    <span className="text-xs font-bold text-solvix-textMuted uppercase tracking-widest">Cost Level</span>
+                    <span className="text-sm font-bold text-solvix-forest bg-white px-3 py-1 rounded-lg border border-solvix-border shadow-sm">
+                      {item.cost}
+                    </span>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-solvix-border/60">
+                    <span className="block text-[10px] font-bold text-solvix-textMuted uppercase tracking-widest mb-2">Application Segment</span>
+                    <span className="block text-sm font-bold text-solvix-textDark">
+                      {item.app}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
