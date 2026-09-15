@@ -10,6 +10,14 @@ export default function TrustTicker() {
     { name: 'ALMM Approved Modules', tag: 'DCR Compliant For Subsidy' },
     { name: '27-Year Panel Warranty', tag: 'Long-Term Reliability' },
     { name: 'ISO 9001:2015', tag: 'Quality Guaranteed' },
+    { name: '8*+ Years', tag: 'Solar Experience' },
+    { name: '300 MW Capacity', tag: 'Palwal, Haryana' },
+    { name: '₹1000 Cr.*', tag: 'Annual Revenue' },
+    { name: '₹250 Cr.*', tag: 'Net Worth' },
+    { name: '300 MW PV Module', tag: 'Production Capacity' },
+    { name: '100 MW Inverter & Battery', tag: 'Production Capacity' },
+    { name: '300+ Skilled', tag: 'Team Members' },
+    { name: '10+ Countries', tag: 'Global Export' },
   ];
 
   return (
