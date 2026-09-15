@@ -50,7 +50,7 @@ export default function ProjectsShowcase() {
             </div>
             
             <h2 className="text-4xl sm:text-5xl font-extrabold text-solvix-forest tracking-tighter pb-2">
-              Our Official Partners
+              Our official partner approved by State Agencies & PSUS
             </h2>
             <p className="mt-4 max-w-2xl text-solvix-textMuted font-medium text-base md:text-lg leading-relaxed">
               We are proud to be trusted and approved by premier government agencies and public sector undertakings across India.
