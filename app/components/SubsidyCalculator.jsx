@@ -8,12 +8,8 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
   const [monthlyBill, setMonthlyBill] = useState(3500);
 
   // Calculation Logic
-  // Average electricity rate in WB ~ ₹7.5 / kWh
-  const unitsPerMonth = Math.round(monthlyBill / 7.5);
-  // 1 kW produces approx 120 kWh per month
-  let recommendedKw = Math.ceil(unitsPerMonth / 120);
+  let recommendedKw = Math.round(monthlyBill / 1000);
   if (recommendedKw < 1) recommendedKw = 1;
-  if (recommendedKw > 10) recommendedKw = 10;
 
   // Govt Subsidy Slab (PM Surya Ghar)
   let subsidy = 0;
@@ -21,11 +17,12 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
   else if (recommendedKw === 2) subsidy = 60000;
   else if (recommendedKw >= 3) subsidy = 78000;
 
-  const totalCost = recommendedKw * 55000; // ~₹55,000 per kW benchmark
+  const totalCost = recommendedKw * 55000;
   const netInvestment = Math.max(0, totalCost - subsidy);
   const monthlySavings = Math.round(monthlyBill * 0.85);
   const annualSavings = monthlySavings * 12;
   const paybackYears = (netInvestment / (annualSavings || 1)).toFixed(1);
+
 
   const handleApply = () => {
     if (onApplyEstimate) {
@@ -124,7 +121,7 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
             <div className="space-y-2">
               <span className="text-xs font-bold text-solvix-textMuted block">Quick Slabs:</span>
               <div className="flex flex-wrap gap-2">
-                {[2000, 3500, 6000, 10000, 15000].map((val) => (
+                {[1000, 2800, 3500, 6000, 10000].map((val) => (
                   <button
                     key={val}
                     onClick={() => setMonthlyBill(val)}
@@ -149,6 +146,14 @@ export default function SubsidyCalculator({ onApplyEstimate }) {
                 <CheckCircle className="w-4 h-4 text-solvix-leafDark shrink-0" />
                 27-Year Performance Warranty on Solar PV Modules
               </div>
+            </div>
+
+            {/* Subsidy Note */}
+            <div className="mt-4 p-4 bg-white/60 backdrop-blur-md border border-solvix-border rounded-2xl shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-solvix-leaf" />
+              <p className="text-[11px] text-solvix-textMuted leading-relaxed">
+                <strong className="text-solvix-forest">PM Surya Ghar: Muft Bijli Yojana</strong> provides direct subsidies: ₹30,000 for 1 kW, ₹60,000 for 2 kW, and a maximum capped subsidy of ₹78,000 for systems 3 kW and above (Residential Homeowners only).
+              </p>
             </div>
           </motion.div>
 
