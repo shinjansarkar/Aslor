@@ -23,7 +23,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
-            className="md:col-span-5 space-y-4"
+            className="md:col-span-4 space-y-4"
           >
             <div className="flex items-center gap-3">
               <div className="p-1.5 rounded-xl bg-white/10 border border-white/15">
@@ -50,7 +50,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="md:col-span-3 space-y-3"
+            className="md:col-span-2 space-y-3"
           >
             <h4 className="text-xs font-extrabold text-solvix-leafPillBg uppercase tracking-widest">
               Quick Navigation
@@ -90,7 +90,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="md:col-span-4 space-y-3"
+            className="md:col-span-3 space-y-3"
           >
             <h4 className="text-xs font-extrabold text-solvix-leafPillBg uppercase tracking-widest">
               Aslor Regional Hub
@@ -118,6 +118,36 @@ export default function Footer() {
                 <ShieldCheck className="w-4 h-4 text-solvix-leafPillBg shrink-0" />
                 Approved by MNRE, WBSEDCL, & CESC
               </p>
+            </div>
+          </motion.div>
+
+          {/* Opening Hours */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="md:col-span-3 space-y-3"
+          >
+            <h4 className="text-xs font-extrabold text-solvix-leafPillBg uppercase tracking-widest">
+              Opening Hours
+            </h4>
+            <div className="space-y-3 text-xs text-neutral-300 font-medium mt-1">
+              <div className="flex justify-between items-center border-b border-white/5 pb-1.5">
+                <div className="flex flex-col">
+                  <span>Mon - Sat</span>
+                  <span className="text-[9px] text-neutral-400 -mt-0.5">(Except Thursday)</span>
+                </div>
+                <span className="text-white text-right">9:00 AM - 7:30 PM</span>
+              </div>
+              <div className="flex justify-between items-center border-b border-white/5 pb-1.5">
+                <span>Thursday</span>
+                <span className="text-solvix-leafPillBg font-bold text-right">Closed</span>
+              </div>
+              <div className="flex justify-between items-center pb-1.5">
+                <span>Sunday</span>
+                <span className="text-white text-right">10:00 AM - 2:00 PM</span>
+              </div>
             </div>
           </motion.div>
         </div>

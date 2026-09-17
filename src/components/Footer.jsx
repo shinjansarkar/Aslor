@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Main Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/5 text-left">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 pb-12 border-b border-white/5 text-left">
           
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
@@ -78,6 +78,28 @@ export default function Footer() {
                   <span>Certified Partner of</span>
                   <img src="/loom-logo.svg" alt="Loom Solar" className="h-4 object-contain" />
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Opening Hours */}
+          <div className="space-y-3">
+            <div className="text-xs font-bold text-white uppercase tracking-wider">Opening Hours</div>
+            <div className="space-y-3 text-xs text-neutral-300 mt-1">
+              <div className="flex justify-between items-center border-b border-white/5 pb-1.5 gap-2">
+                <div className="flex flex-col">
+                  <span>Mon - Sat</span>
+                  <span className="text-[9px] text-neutral-500 -mt-0.5">(Except Thursday)</span>
+                </div>
+                <span className="text-white text-right">9:00 AM - 7:30 PM</span>
+              </div>
+              <div className="flex justify-between items-center border-b border-white/5 pb-1.5">
+                <span>Thursday</span>
+                <span className="text-lime-400 font-bold text-right">Closed</span>
+              </div>
+              <div className="flex justify-between items-center pb-1.5">
+                <span>Sunday</span>
+                <span className="text-white text-right">10:00 AM - 2:00 PM</span>
               </div>
             </div>
           </div>
