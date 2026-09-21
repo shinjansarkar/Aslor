@@ -6,14 +6,14 @@ import { MapPin, Zap, Activity, Cpu, ShieldCheck } from 'lucide-react';
 
 export default function ProjectsShowcase() {
   const installations = [
-    { capacity: '1.1 MW', location: 'Haridwar, Uttarakhand' },
-    { capacity: '2.4 MW', location: 'Madhya Pradesh' },
-    { capacity: '3.5 MW', location: 'Jodhpur, Rajasthan' },
-    { capacity: '3.25 MW', location: 'Erode, Tamil Nadu' },
-    { capacity: '5.0 MW', location: 'Bhadla, Rajasthan' },
-    { capacity: '2.0 MW', location: 'Pune, Maharashtra' },
-    { capacity: '1.5 MW', location: 'Surat, Gujarat' },
-    { capacity: '4.2 MW', location: 'Kurnool, Andhra Pradesh' },
+    { capacity: '1.1 MW', location: 'Haridwar, Uttarakhand', img: '/installations/haridwar.webp' },
+    { capacity: '2.4 MW', location: 'Madhya Pradesh', img: '/installations/madhya_pradesh.webp' },
+    { capacity: '3.5 MW', location: 'Jodhpur, Rajasthan', img: '/installations/jodhpur.webp' },
+    { capacity: '3.25 MW', location: 'Erode, Tamil Nadu', img: '/installations/erode_3_25.webp' },
+    { capacity: '5.3 MW', location: 'Indore', img: '/installations/indore.webp' },
+    { capacity: '8 MW', location: 'Erode, Tamil Nadu', img: '/installations/erode_8.webp' },
+    { capacity: '26 MW', location: 'Ramendram Pura', img: '/installations/ramendram_pura.webp' },
+    { capacity: '700 KW', location: 'Aurangabad', img: '/installations/aurangabad.webp' },
   ];
 
   const technologies = [
@@ -91,7 +91,7 @@ export default function ProjectsShowcase() {
           </div>
         </div>
 
-        {/* Installations Section (No Photos, Clean Premium UI) */}
+        {/* Installations Section */}
         <div className="relative z-10 pt-8">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -123,25 +123,25 @@ export default function ProjectsShowcase() {
             {installations.map((item, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                initial={{ opacity: 0, scale: 0.95, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group relative bg-white/60 backdrop-blur-md border border-white/80 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300"
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
+                className="bg-white/70 backdrop-blur-md border border-solvix-border rounded-2xl flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-shadow group"
               >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-solvix-leaf/20 to-transparent rounded-bl-full rounded-tr-3xl opacity-50 group-hover:opacity-100 transition-opacity" />
-                
-                <div className="w-12 h-12 rounded-2xl bg-solvix-leafPillBg text-solvix-leafDark flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                  <MapPin size={24} strokeWidth={2.5} />
+                <div className="w-full h-48 sm:h-40 lg:h-48 overflow-hidden bg-solvix-leafPillBg">
+                  {/* We add an onError to fallback to a placeholder if the image isn't there yet */}
+                  <img 
+                    src={item.img} 
+                    alt={`${item.capacity} ${item.location}`} 
+                    onError={(e) => { e.target.onerror = null; e.target.src = '/aslor-commercial-farm.webp'; }}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  />
                 </div>
-                
-                <h3 className="text-3xl font-black text-solvix-forest mb-2">
-                  {item.capacity}
-                </h3>
-                
-                <div className="flex items-start gap-2 text-solvix-textMuted font-medium group-hover:text-solvix-textDark transition-colors">
-                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-solvix-leaf shrink-0" />
-                  {item.location}
+                <div className="p-4 flex flex-col items-center justify-center text-center bg-white">
+                  <h4 className="text-sm font-bold text-solvix-forest leading-snug">
+                    {item.capacity} {item.location}
+                  </h4>
                 </div>
               </motion.div>
             ))}
