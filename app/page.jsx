@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import ShaderShowcase from './components/ui/hero';
 import TrustTicker from './components/TrustTicker';
+import SystemTypes from './components/SystemTypes';
+import PropertySolutions from './components/PropertySolutions';
 import ResidentialSection from './components/ResidentialSection';
 import CommercialSection from './components/CommercialSection';
 import WhyChooseAslor from './components/WhyChooseAslor';
@@ -41,7 +43,14 @@ export default function Home() {
         {/* 2. Trust Badges & Partner Ticker */}
         <TrustTicker />
 
-        {/* 3. B2C Section: Residential Solar & Government Subsidies */}
+        {/* 3. System Configurations */}
+        <SystemTypes />
+
+        {/* 4. Property Specific Solutions */}
+        <PropertySolutions />
+
+        {/* 5. B2C Section: Residential Solar & Government Subsidies */}
+
         <ResidentialSection onSelectTrack={handleSelectTrack} />
 
         {/* 4. B2B Section: Commercial & Industrial (C&I) Solutions */}
