@@ -104,7 +104,7 @@ export default function ShaderShowcase({ onSelectTrack }) {
           <motion.div variants={fadeUp} className="lg:col-span-6 relative">
             <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl group">
               <img 
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop" 
+                src="/hero.webp" 
                 alt="Modern Solar Panels" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
               />

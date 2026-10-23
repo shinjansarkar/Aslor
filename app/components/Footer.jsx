@@ -1,14 +1,31 @@
 'use client';
 
 import React from 'react';
-import { ShieldCheck, ArrowUpRight, Sun, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { ShieldCheck, ArrowUpRight, Sun, Phone, Mail, MapPin, Facebook, Instagram, Images } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
-  const scrollTo = (id) => {
-    const elem = document.getElementById(id);
-    if (elem) {
-      elem.scrollIntoView({ behavior: 'smooth' });
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNav = (id) => {
+    if (pathname === '/') {
+      const elem = document.getElementById(id);
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      router.push('/#' + id);
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      router.push('/');
     }
   };
 
@@ -25,19 +42,22 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="md:col-span-4 space-y-4"
           >
-            <div className="flex items-center gap-3">
-              <div className="p-1.5 rounded-xl bg-white/10 border border-white/15">
+            <button 
+              onClick={handleLogoClick}
+              className="flex items-center gap-3 text-left bg-transparent border-0 p-0 cursor-pointer group"
+            >
+              <div className="p-1.5 rounded-xl bg-white/10 border border-white/15 group-hover:bg-white/20 transition-colors">
                 <img src="/logo.webp" alt="Aslor Enterprises Big Logo" className="h-11 sm:h-12 w-auto object-contain" />
               </div>
               <div>
-                <span className="font-extrabold text-lg text-white tracking-tight">
+                <span className="font-extrabold text-lg text-white tracking-tight group-hover:text-solvix-leaf transition-colors">
                   ASLOR ENTERPRISES
                 </span>
                 <p className="text-[10px] text-solvix-leafPillBg font-bold">
                   Premier Solar Energy Partner
                 </p>
               </div>
-            </div>
+            </button>
 
             <p className="text-xs text-neutral-300 max-w-sm leading-relaxed font-medium">
               Empowering homes, commercial enterprises, and agriculture across West Bengal with world-class rooftop solar EPC, PM Surya Ghar subsidies, and 27-year panel performance guarantees.
@@ -57,27 +77,33 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-neutral-300 font-medium">
               <li>
-                <button onClick={() => scrollTo('hero')} className="hover:text-solvix-leafPillBg transition-colors">
+                <button onClick={() => handleNav('hero')} className="hover:text-solvix-leafPillBg transition-colors">
                   Home
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('benefits')} className="hover:text-solvix-leafPillBg transition-colors">
-                  Benefits of Solar
+                <Link href="/gallery" className="hover:text-solvix-leafPillBg text-solvix-leaf font-bold flex items-center gap-1 transition-colors">
+                  <Images className="w-3.5 h-3.5" />
+                  Client Works & Gallery
+                </Link>
+              </li>
+              <li>
+                <button onClick={() => handleNav('residential')} className="hover:text-solvix-leafPillBg transition-colors">
+                  Residential Solar
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('projects')} className="hover:text-solvix-leafPillBg transition-colors">
+                <button onClick={() => handleNav('commercial')} className="hover:text-solvix-leafPillBg transition-colors">
+                  Commercial Solar
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('projects')} className="hover:text-solvix-leafPillBg transition-colors">
                   Solar Projects
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('solutions')} className="hover:text-solvix-leafPillBg transition-colors">
-                  Solar Solutions
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollTo('calculator')} className="hover:text-solvix-leafPillBg transition-colors text-solvix-leafPillBg font-bold">
+                <button onClick={() => handleNav('calculator')} className="hover:text-solvix-leafPillBg transition-colors text-solvix-leafPillBg font-bold">
                   PM Surya Ghar Calculator
                 </button>
               </li>

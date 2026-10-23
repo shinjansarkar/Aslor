@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { MapPin, Zap, Activity, Cpu, ShieldCheck } from 'lucide-react';
+import { MapPin, Zap, Activity, Cpu, ShieldCheck, ArrowUpRight } from 'lucide-react';
 
 export default function ProjectsShowcase() {
   const installations = [
@@ -146,6 +147,50 @@ export default function ProjectsShowcase() {
               </motion.div>
             ))}
           </div>
+
+          {/* Featured Client Handover Callout Banner linking to /gallery */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-white/90 via-solvix-leafPillBg/40 to-white/90 border border-solvix-leaf/30 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+              <div className="relative w-20 h-20 rounded-2xl overflow-hidden shrink-0 border-2 border-solvix-leaf shadow-md">
+                <img
+                  src="/gallery/rakesh-mahato-certificate.webp"
+                  alt="Rakesh Mahato Handover"
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute bottom-0 inset-x-0 bg-solvix-forest/90 text-white text-[9px] font-extrabold text-center py-0.5">
+                  NEW HANDOVER
+                </span>
+              </div>
+              <div className="space-y-1">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-solvix-leaf text-white text-[10px] font-bold uppercase tracking-wider">
+                  <ShieldCheck className="w-3 h-3" /> Verified Client Story • Alipurduar, WB
+                </div>
+                <h3 className="text-xl sm:text-2xl font-extrabold text-solvix-forest">
+                  Rakesh Mahato's Rooftop Solar Handover
+                </h3>
+                <p className="text-xs sm:text-sm text-solvix-textMuted font-medium max-w-xl">
+                  Explore high-resolution photo gallery, verified customer testimonial, and live Instagram reels from our latest rooftop installation in Paschim Jitpur, Alipurduar.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0 w-full sm:w-auto">
+              <Link
+                href="/gallery"
+                className="btn-solvix-primary text-xs py-3 px-6 shadow-md justify-center"
+              >
+                <span>View Full Gallery & Reels</span>
+                <div className="icon-badge">
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </div>
+              </Link>
+            </div>
+          </motion.div>
         </div>
 
         {/* Technology Section (Modern Bento/Card Layout) */}
